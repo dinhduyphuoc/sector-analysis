@@ -1,12 +1,21 @@
-import express, { Express, Request, Response } from "express";
-const port: number = 8000;
+// import router from './api/routes';
+import Express, { Request, Response } from "express";
+import router from "./api/routes/router";
 
-const app: Express = express();
+const app = Express();
+const port: number = 3000;
+
+app.use(Express.json());
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
+  res.json({
+    name: "sector-analysis-api",
+    version: "1.0.0",
+  });
 });
 
+app.use("/api", router);
+
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });
