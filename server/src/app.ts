@@ -1,6 +1,5 @@
-// import router from './api/routes';
 import Express, { Request, Response } from "express";
-import router from "./api/routes/router";
+import router from "./controllers";
 
 const app = Express();
 const port: number = 3000;
@@ -14,7 +13,7 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 
-app.use("/api", router);
+app.use("/v1/", router);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
