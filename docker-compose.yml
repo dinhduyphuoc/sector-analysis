@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  server:
+    build: ./server
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=sector-analysis
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    volumes:
+      - ./pgdata:/var/lib/postgresql/
+
+volumes:
+  pgdata:
+  
