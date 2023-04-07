@@ -1,9 +1,11 @@
 import Express, { Request, Response } from "express";
-import router from "./controllers";
+import { config } from "dotenv";
 import pool from "./models/db";
+import { router } from "./routes/v1";
 
+config();
 const app = Express();
-const port: number = 3000;
+const port: number = process.env.PORT || 3000;
 
 app.use(Express.json());
 
@@ -17,7 +19,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.get("/test", (req: Request, res: Response) => {
-  pool.query('SELECT * FROM "FinancialStatements"', (err, result) => {
+  pool.query('SELECT * FROM "fin_state_items"', (err, result) => {
     if (err) {
       console.log(err);
     }
@@ -25,6 +27,10 @@ app.get("/test", (req: Request, res: Response) => {
     res.send(result.rows);
   });
 })
+
+// const date = new Date().toISOString().slice(0, 10);
+// console.log(date);
+
 
 app.use("/v1/", router);
 
