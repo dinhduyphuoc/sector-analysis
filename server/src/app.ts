@@ -1,4 +1,5 @@
 import Express, { Request, Response } from "express";
+import cors from "cors";
 import { config } from "dotenv";
 import pool from "./models/db";
 import { router } from "./routes/v1";
@@ -8,6 +9,7 @@ const app = Express();
 const port: number = process.env.PORT || 3000;
 
 app.use(Express.json());
+app.use(cors())
 
 pool.connect();
 

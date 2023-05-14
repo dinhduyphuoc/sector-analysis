@@ -1,13 +1,23 @@
 import { Router } from "express";
-import { insightRouter } from "./insightRoute";
+import { chartRouter } from "./chartRoute";
+import { stockRouter } from "./stockRoute";
+import { sectorRouter } from "./sectorRoute";
 
 const router = Router();
 
 const defaultRoutes = [
     {
-        path: "/stock-insight",
-        router: insightRouter,
+        path: "/stock",
+        router: stockRouter,
     },
+    {
+        path: "/chart",
+        router: chartRouter
+    },
+    {
+        path: "/sector",
+        router: sectorRouter
+    }
 ];
 
 defaultRoutes.forEach((route) => {

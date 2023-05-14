@@ -11,8 +11,8 @@ body {
   color: white;
 }
 
-html {
-  background-color: #0d0d0d;
+html, body {
+  width: 100%;
 }
 
 code {
