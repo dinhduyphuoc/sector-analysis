@@ -1,12 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Box } from "@mui/system";
-import { Button, Stack, Tab, Tabs, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import sectorsStore from "../../stores/sectorStore";
+import SelectSmall from "../select/SelectSmall";
+import { useSectorUpdate } from "../../contexts/sectorContext";
 
-const LineChart = ({ sectorData }) => {
-  const sectors = sectorsStore((state) => state.sectors);
+// Chart states
+const ratioOptions = [
+  { value: 10, label: "P/E" },
+  { value: 20, label: "P/B" },
+  { value: 30, label: "EPS" },
+  { value: 40, label: "ROE" },
+  { value: 50, label: "ROA" },
+];
+
+const LineChart = ({ sectors, sectorData }) => {
+  // const [interval, setInterval] = useState("Q");
+  const { updateSectorsData } = useSectorUpdate();
+  const [index, setRatio] = useState(10);
   const [chartOptions, setChartOptions] = useState({
     chart: {
       backgroundColor: "#20232E",
@@ -22,7 +34,6 @@ const LineChart = ({ sectorData }) => {
     tooltip: {
       xDateFormat: "%d/%m/%Y",
     },
-
     xAxis: {
       type: "datetime",
       tickInterval: 2 * 7 * 24 * 3600 * 1000,
@@ -49,7 +60,7 @@ const LineChart = ({ sectorData }) => {
   });
 
   useEffect(() => {
-    if (sectorData) {
+    if (sectorData && sectors) {
       setChartOptions({
         series: sectorData.map((sector) => {
           return {
@@ -59,7 +70,30 @@ const LineChart = ({ sectorData }) => {
         }),
       });
     }
-  }, [sectorData]);
+  }, [sectorData, sectors]);
+
+  const handleSelectionChange = (e) => {
+    switch (e.target.value) {
+      case 10:
+        updateSectorsData("pe");
+        break;
+      case 20:
+        updateSectorsData("pb");
+        break;
+      case 30:
+        updateSectorsData("eps");
+        break;
+      case 40:
+        updateSectorsData("roe");
+        break;
+      case 50:
+        updateSectorsData("roa");
+        break;
+      default:
+        break;
+    }
+    setRatio(e.target.value);
+  };
 
   return (
     <Box display="flex" flexDirection="column">
@@ -69,12 +103,14 @@ const LineChart = ({ sectorData }) => {
         sx={{ padding: "24px" }}
       >
         <Typography variant="h6" fontWeight="700">
-          Test
+          Biểu đồ theo:
         </Typography>
         <Stack direction="row">
-          <Button variant="contained">1Y</Button>
-          <Button variant="text">3Y</Button>
-          <Button variant="text">5Y</Button>
+          <SelectSmall
+            options={ratioOptions}
+            option={index}
+            onChange={handleSelectionChange}
+          />
         </Stack>
       </Box>
       <HighchartsReact

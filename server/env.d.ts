@@ -11,7 +11,16 @@ declare global {
             POSTGRES_PORT: number;
             POSTGRES_REJECTUNAUTHORIZED: boolean;
         }
+        interface ChartData {
+            row: {
+                id: number | string;
+                datetime: string[];
+                price: string[];
+            }
+        }
     }
 }
 
-export { }
+export {
+    ChartData
+}

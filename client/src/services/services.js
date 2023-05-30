@@ -7,9 +7,21 @@ export const getSectorsList = async () => {
   return data;
 };
 
-export const getSectorData = async (sectorId, startDate = "", endDate = "") => {
+export const getSectorsFundamentalData = async () => {
+  const { data } = await http.get(`${host}/sector/fundamental`);
+  return data;
+};
+
+export const getSectorsChartFundamentalData = async (
+  sectorsId,
+  ratio = "pe",
+  startDate = "",
+  endDate = ""
+) => {
+  const joined =
+    typeof sectorsId === "number" ? sectorsId : sectorsId.join(",");
   const { data } = await http.get(
-    `${host}/chart/sector?sectorid=${sectorId}&startDate=${startDate}&endDate=${endDate}`
+    `${host}/chart/fundamental?ratio=${ratio}&sectorid=${joined}&startDate=${startDate}&endDate=${endDate}`
   );
   return data;
 };

@@ -1,6 +1,5 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { alpha } from "@mui/material/styles";
 import { useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
 import Table from "@mui/material/Table";
@@ -11,48 +10,13 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import TableSortLabel from "@mui/material/TableSortLabel";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import Checkbox from "@mui/material/Checkbox";
-import IconButton from "@mui/material/IconButton";
-import Tooltip from "@mui/material/Tooltip";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
-import DeleteIcon from "@mui/icons-material/Delete";
-import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
 import { ColorModeContext, tokens } from "../../theme";
 import { useContext } from "react";
-import sectorsStore from "../../stores/sectorStore";
-
-function createData(sector, sectorid, eps = 1, pe = 1, pb = 1, roe = 1) {
-  return {
-    sector,
-    sectorid,
-    eps,
-    pe,
-    pb,
-    roe,
-  };
-}
-
-const createRows = (sectors) => {
-  const rows = [];
-  sectors.forEach((sector) => {
-    rows.push(
-      createData(
-        sector.name,
-        sector.id,
-        Math.floor(Math.random() * 100),
-        Math.floor(Math.random() * 100),
-        Math.floor(Math.random() * 100),
-        Math.floor(Math.random() * 100)
-      )
-    );
-  });
-  return rows;
-};
+import { useSectorUpdate } from "../../contexts/sectorContext";
+import { getSectorsFundamentalData } from "../../services/services";
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -70,10 +34,6 @@ function getComparator(order, orderBy) {
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-// Since 2020 all major browsers ensure sort stability with Array.prototype.sort().
-// stableSort() brings sort stability to non-modern browsers (notably IE11). If you
-// only support modern browsers you can replace stableSort(exampleArray, exampleComparator)
-// with exampleArray.slice().sort(exampleComparator)
 function stableSort(array, comparator) {
   const stabilizedThis = array.map((el, index) => [el, index]);
   stabilizedThis.sort((a, b) => {
@@ -110,11 +70,16 @@ const headCells = [
   {
     id: "roe",
     numeric: true,
-    label: "ROE",
+    label: "ROE (%)",
+  },
+  {
+    id: "roa",
+    numeric: true,
+    label: "ROA (%)",
   },
 ];
 
-const DEFAULT_ORDER = "asc";
+const DEFAULT_ORDER = "desc";
 const DEFAULT_ORDER_BY = "eps";
 const DEFAULT_ROWS_PER_PAGE = 5;
 
@@ -175,34 +140,32 @@ export default function EnhancedTable({ sectors, sectorsState }) {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
-  const updateState = sectorsStore((state) => state.updateState);
+  const { toggleSector } = useSectorUpdate();
   const [rows, setRows] = React.useState([]);
   const [order, setOrder] = React.useState(DEFAULT_ORDER);
   const [orderBy, setOrderBy] = React.useState(DEFAULT_ORDER_BY);
-  // const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
   const [visibleRows, setVisibleRows] = React.useState(null);
   const [rowsPerPage, setRowsPerPage] = React.useState(DEFAULT_ROWS_PER_PAGE);
   const [paddingHeight, setPaddingHeight] = React.useState(0);
 
-  // React.useEffect(() => {
-  //   setSelected(sectorsState);
-  // }, [sectorsState]);
-
   React.useEffect(() => {
-    const rows = createRows(sectors);
-    let rowsOnMount = stableSort(
-      rows,
-      getComparator(DEFAULT_ORDER, DEFAULT_ORDER_BY)
-    );
+    const fetchSectors = async () => {
+      const rows = await getSectorsFundamentalData();
+      let rowsOnMount = stableSort(
+        rows,
+        getComparator(DEFAULT_ORDER, DEFAULT_ORDER_BY)
+      );
 
-    rowsOnMount = rowsOnMount.slice(
-      0 * DEFAULT_ROWS_PER_PAGE,
-      0 * DEFAULT_ROWS_PER_PAGE + DEFAULT_ROWS_PER_PAGE
-    );
+      rowsOnMount = rowsOnMount.slice(
+        0 * DEFAULT_ROWS_PER_PAGE,
+        0 * DEFAULT_ROWS_PER_PAGE + DEFAULT_ROWS_PER_PAGE
+      );
 
-    setVisibleRows(rowsOnMount);
-    setRows(rows);
+      setVisibleRows(rowsOnMount);
+      setRows(rows);
+    };
+    fetchSectors();
   }, [sectors]);
 
   const handleRequestSort = React.useCallback(
@@ -251,7 +214,7 @@ export default function EnhancedTable({ sectors, sectorsState }) {
   );
 
   const handleClickOption = (sectorid) => {
-    updateState(sectorid);
+    toggleSector(sectorid);
   };
 
   const handleChangeRowsPerPage = React.useCallback(
@@ -309,7 +272,7 @@ export default function EnhancedTable({ sectors, sectorsState }) {
                         role="checkbox"
                         aria-checked={isItemSelected}
                         tabIndex={-1}
-                        key={row.sector}
+                        key={row.name}
                         selected={isItemSelected}
                         sx={{ cursor: "pointer" }}
                       >
@@ -328,12 +291,23 @@ export default function EnhancedTable({ sectors, sectorsState }) {
                           scope="row"
                           padding="none"
                         >
-                          {row.sector}
+                          {row.name}
                         </TableCell>
-                        <TableCell align="right">{row.eps}</TableCell>
-                        <TableCell align="right">{row.pe}</TableCell>
-                        <TableCell align="right">{row.pb}</TableCell>
-                        <TableCell align="right">{row.roe}</TableCell>
+                        <TableCell align="right">
+                          {typeof row.eps === "string" ? row.eps : "NaN"}
+                        </TableCell>
+                        <TableCell align="right">
+                          {typeof row.pe === "string" ? row.pe : "NaN"}
+                        </TableCell>
+                        <TableCell align="right">
+                          {typeof row.pb === "string" ? row.pb : "NaN"}
+                        </TableCell>
+                        <TableCell align="right">
+                          {typeof row.roe === "string" ? `${row.roe}%` : "NaN"}
+                        </TableCell>
+                        <TableCell align="right">
+                          {typeof row.roa === "string" ? `${row.roa}%` : "NaN"}
+                        </TableCell>
                       </TableRow>
                     );
                   })

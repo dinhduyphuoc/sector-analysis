@@ -1,42 +1,54 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Box } from "@mui/system";
-import { Button, Tab, Tabs, Typography, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 import LineChart from "../../components/charts/LineChart";
-import { convertISO8601ToMilliseconds } from "../../utils/timeUtils";
+import { convertISO8601ToMilliseconds, roundNum } from "../../utils/utils";
 import EnhancedTable from "../../components/tables/EnhancedTable";
-import sectorsStore from "../../stores/sectorStore";
-import http from "../../utils/httpUtils";
 import { ColorModeContext, tokens } from "../../theme";
-import { useContext } from "react";
-import { getSectorsList } from "../../services/services";
+import { useSector, useSectorUpdate } from "../../contexts/sectorContext";
+import {
+  getSectorsChartFundamentalData,
+  getSectorsList,
+} from "../../services/services";
 
 const DashBoard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
-  const sectors = sectorsStore((state) => state.sectors);
-  const sectorsState = sectorsStore((state) => state.sectorsState);
-  const sectorsData = sectorsStore((state) => state.sectorsData);
-  const initSectors = sectorsStore((state) => state.initSectors);
+  const { sectors, sectorsState, sectorsData } = useSector();
+  const { initSectors } = useSectorUpdate();
 
-  const [sectorData, setSector] = useState([]);
+  // Cache data on client side
+  // const { data } = useQuery(
+  //   ["sectors", "sectorsState", "sectorsData"],
+  //   async () => {
+  //     const sectorsId = [10, 15, 30];
+  //     const sectors = await getSectorsList();
+  //     const sectorsData = await getSectorsChartFundamentalData(sectorsId);
+  //     return [sectors, sectorsId, sectorsData];
+  //   },
+  //   {
+  //     staleTime: Infinity,
+  //   }
+  // );
 
   useEffect(() => {
-    initSectors([10, 15, 20]);
+    const initSectorsData = async () => {
+      const sectorsId = [10, 15, 30];
+      initSectors(sectorsId);
+    };
+    initSectorsData();
   }, []);
 
-  useEffect(() => {
-    const removed = sectorsData.filter((sector) => {
-      return !sectorsState.includes(parseInt(sector.sectorid));
-    });
-  }, [sectorsState]);
+  const [sectorData, setSector] = useState([]);
 
   useEffect(() => {
     const chartData = sectorsData.map((sector) => {
       const processed = sector.price.map((price, i) => {
         return [
-          convertISO8601ToMilliseconds(sector.date[i], 7),
-          parseFloat(price),
+          convertISO8601ToMilliseconds(sector.datetime[i], 7),
+          roundNum(parseFloat(price)),
         ];
       });
       return {
@@ -44,7 +56,6 @@ const DashBoard = () => {
         sectorid: parseInt(sector.sectorid),
       };
     });
-
     setSector(chartData);
   }, [sectorsData]);
 
@@ -65,9 +76,9 @@ const DashBoard = () => {
           }}
         >
           <Box flex="5">
-            <LineChart sectorData={sectorData} />
+            <LineChart sectors={sectors} sectorData={sectorData} />
           </Box>
-          <Box
+          {/* <Box
             display="flex"
             flexDirection="column"
             flex="1"
@@ -90,7 +101,7 @@ const DashBoard = () => {
                 <Tab label="Biểu đồ" disableRipple />
               </Tabs>
             </Box>
-          </Box>
+          </Box> */}
         </Box>
       </Box>
       <Box

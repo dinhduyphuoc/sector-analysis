@@ -26,7 +26,30 @@ const getSectorData = catchAsync(async (req, res) => {
     })
 })
 
+const getFundamentalData = catchAsync(async (req, res) => {
+    const { sectorid, startDate, endDate } = req.query;
+    const query = `SELECT
+                        sectorid,
+                        "name",
+                        ROUND(AVG(pe)::numeric, 2) AS pe,
+                        ROUND(AVG(pb)::numeric, 2) AS pb,
+                        ROUND(AVG(eps)::numeric, 2) AS eps,
+                        ROUND(AVG(roa)::numeric, 2) AS roa,
+                        ROUND(AVG(roe)::numeric, 2) AS roe
+                    FROM
+                        stock_index_by_date_table
+                    GROUP BY
+                        1,
+                        2
+                    ORDER BY
+                        1`
+    const queryResult = await pool.query(query);
+    res.json(queryResult.rows)
+});
+
+
 export {
     getSectorsList,
     getSectorData,
+    getFundamentalData
 };
