@@ -2,6 +2,20 @@ import http from "../utils/httpUtils";
 
 const host = "http://localhost:8000/v1";
 
+export const getStocksList = async () => {
+  const { data } = await http.get(`${host}/stock/list`);
+  return data;
+};
+
+export const getStockInfo = async (ticker) => {
+  const { data } = await http.get(`${host}/stock/info/${ticker}`);
+  return data;
+};
+
+export const getStockLogo = (ticker) => {
+  return `https://cdn.simplize.vn/simplizevn/logo/${ticker}.jpeg`;
+};
+
 export const getSectorsList = async () => {
   const { data } = await http.get(`${host}/sector/list`);
   return data;

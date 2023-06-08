@@ -1,0 +1,485 @@
+[
+  {
+    "cophieu": "SSI",
+    "LƯU CHUYỂN TIỀN TỪ HOẠT ĐỘNG KINH DOANH": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "Lợi nhuận trước Thuế Thu nhập doanh nghiệp": [
+      { "quarter": 1, "year": 2021, "values": 530067804459.0 },
+      { "quarter": 2, "year": 2021, "values": 733477981840.0 },
+      { "quarter": 3, "year": 2021, "values": 848414122933.0 },
+      { "quarter": 4, "year": 2021, "values": 1253078931937.0 },
+      { "quarter": 1, "year": 2022, "values": 883287604675.0 },
+      { "quarter": 2, "year": 2022, "values": 522514601188.0 },
+      { "quarter": 3, "year": 2022, "values": 415261069199.0 },
+      { "quarter": 4, "year": 2022, "values": 288640116715.0 }
+    ],
+    "Điều chỉnh cho các khoản:": [
+      { "quarter": 1, "year": 2021, "values": -252101227082.0 },
+      { "quarter": 2, "year": 2021, "values": -368852100807.0 },
+      { "quarter": 3, "year": 2021, "values": -422133138733.0 },
+      { "quarter": 4, "year": 2021, "values": -742500745432.0 },
+      { "quarter": 1, "year": 2022, "values": -548766502783.0 },
+      { "quarter": 2, "year": 2022, "values": -365476029191.0 },
+      { "quarter": 3, "year": 2022, "values": -371542942004.0 },
+      { "quarter": 4, "year": 2022, "values": -418694009956.0 }
+    ],
+    "": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": 270197496127.0 },
+      { "quarter": 4, "year": 2021, "values": 475673815170.0 },
+      { "quarter": 1, "year": 2022, "values": 606449040085.0 },
+      { "quarter": 2, "year": 2022, "values": 168024608292.0 },
+      { "quarter": 3, "year": 2022, "values": 513622467623.0 },
+      { "quarter": 4, "year": 2022, "values": 904053554501.0 }
+    ],
+    "(": [
+      { "quarter": 1, "year": 2021, "values": 29358887418.0 },
+      { "quarter": 2, "year": 2021, "values": -2933894289.0 },
+      { "quarter": 3, "year": 2021, "values": 1534482715.0 },
+      { "quarter": 4, "year": 2021, "values": 4393501882.0 },
+      { "quarter": 1, "year": 2022, "values": -4674327662.0 },
+      { "quarter": 2, "year": 2022, "values": 44463885481.0 },
+      { "quarter": 3, "year": 2022, "values": 32759269829.0 },
+      { "quarter": 4, "year": 2022, "values": -9977881138.0 }
+    ],
+    "- Dự thu tiền lãi": [
+      { "quarter": 1, "year": 2021, "values": -367368749579.0 },
+      { "quarter": 2, "year": 2021, "values": -472350747842.0 },
+      { "quarter": 3, "year": 2021, "values": -536863714962.0 },
+      { "quarter": 4, "year": 2021, "values": -652445357352.0 },
+      { "quarter": 1, "year": 2022, "values": -744236916940.0 },
+      { "quarter": 2, "year": 2022, "values": -651249944676.0 },
+      { "quarter": 3, "year": 2022, "values": -634146457765.0 },
+      { "quarter": 4, "year": 2022, "values": -613183439793.0 }
+    ],
+    "Tăng các chi phí phi tiền tệ": [
+      { "quarter": 1, "year": 2021, "values": 95334988570.0 },
+      { "quarter": 2, "year": 2021, "values": 86608204364.0 },
+      { "quarter": 3, "year": 2021, "values": 80158123490.0 },
+      { "quarter": 4, "year": 2021, "values": 88237775122.0 },
+      { "quarter": 1, "year": 2022, "values": 208172883121.0 },
+      { "quarter": 2, "year": 2022, "values": 97847047870.0 },
+      { "quarter": 3, "year": 2022, "values": 109131011069.0 },
+      { "quarter": 4, "year": 2022, "values": 42972393205.0 }
+    ],
+    "Giảm các doanh thu phi tiền tệ": [
+      { "quarter": 1, "year": 2021, "values": -113618650973.0 },
+      { "quarter": 2, "year": 2021, "values": -100565986972.0 },
+      { "quarter": 3, "year": 2021, "values": -75329004152.0 },
+      { "quarter": 4, "year": 2021, "values": -248260641071.0 },
+      { "quarter": 1, "year": 2022, "values": -120811166389.0 },
+      { "quarter": 2, "year": 2022, "values": -44268543223.0 },
+      { "quarter": 3, "year": 2022, "values": -17261500718.0 },
+      { "quarter": 4, "year": 2022, "values": -42055115633.0 }
+    ],
+    "Thay đổi tài sản và nợ phải trả hoạt động": [
+      { "quarter": 1, "year": 2021, "values": -1112358660998.0 },
+      { "quarter": 2, "year": 2021, "values": -5448336810347.0 },
+      { "quarter": 3, "year": 2021, "values": -4773546223387.0 },
+      { "quarter": 4, "year": 2021, "values": -3766751063172.0 },
+      { "quarter": 1, "year": 2022, "values": -2760737990279.0 },
+      { "quarter": 2, "year": 2022, "values": 5090855219882.0 },
+      { "quarter": 3, "year": 2022, "values": -1849662357897.0 },
+      { "quarter": 4, "year": 2022, "values": -5290323791013.0 }
+    ],
+    "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động": [
+      { "quarter": 1, "year": 2021, "values": 70864998188.0 },
+      { "quarter": 2, "year": 2021, "values": 725779935422.0 },
+      { "quarter": 3, "year": 2021, "values": -1307758466412.0 },
+      { "quarter": 4, "year": 2021, "values": 3800773563664.0 },
+      { "quarter": 1, "year": 2022, "values": -2160047470522.0 },
+      { "quarter": 2, "year": 2022, "values": 137521284431.0 },
+      { "quarter": 3, "year": 2022, "values": -435638007633.0 },
+      { "quarter": 4, "year": 2022, "values": -519510909571.0 }
+    ],
+    "(-) Tăng, (+) giảm phải thu bán các tài sản tài chính": [
+      { "quarter": 1, "year": 2021, "values": -2854595113.0 },
+      { "quarter": 2, "year": 2021, "values": 40320317290.0 },
+      { "quarter": 3, "year": 2021, "values": 4596182290.0 },
+      { "quarter": 4, "year": 2021, "values": -259020352385.0 },
+      { "quarter": 1, "year": 2022, "values": 226062330552.0 },
+      { "quarter": 2, "year": 2022, "values": 58405073124.0 },
+      { "quarter": 3, "year": 2022, "values": -5943622290.0 },
+      { "quarter": 4, "year": 2022, "values": -26704698536.0 }
+    ],
+    "(-) Tăng, (+) giảm phải thu tiền lãi các tài sản tài chính": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": 0.0 },
+      { "quarter": 4, "year": 2021, "values": 0.0 },
+      { "quarter": 1, "year": 2022, "values": 0.0 },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": 0.0 },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "(-) Tăng, (+) giảm các khoản phải thu các dịch vụ CTCK cung cấp": [
+      { "quarter": 1, "year": 2021, "values": 2042256889.0 },
+      { "quarter": 2, "year": 2021, "values": 1780323475.0 },
+      { "quarter": 3, "year": 2021, "values": -682961997.0 },
+      { "quarter": 4, "year": 2021, "values": -10747884881.0 },
+      { "quarter": 1, "year": 2022, "values": -12784291546.0 },
+      { "quarter": 2, "year": 2022, "values": 12784291546.0 },
+      { "quarter": 3, "year": 2022, "values": -3115716827.0 },
+      { "quarter": 4, "year": 2022, "values": -16137030057.0 }
+    ],
+    "(-) Tăng, (+) giảm các khoản phải thu về lỗi giao dịch chứng khoán": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": 0.0 },
+      { "quarter": 4, "year": 2021, "values": 0.0 },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": -10646269229.0 },
+      { "quarter": 3, "year": 2022, "values": 10646269229.0 },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "(-) Tăng, (+) giảm các khoản phải thu khác": [
+      { "quarter": 1, "year": 2021, "values": -429058987930.0 },
+      { "quarter": 2, "year": 2021, "values": 297304382713.0 },
+      { "quarter": 3, "year": 2021, "values": -514949141946.0 },
+      { "quarter": 4, "year": 2021, "values": -393497401674.0 },
+      { "quarter": 1, "year": 2022, "values": 1105540587975.0 },
+      { "quarter": 2, "year": 2022, "values": -285795110254.0 },
+      { "quarter": 3, "year": 2022, "values": -327977600855.0 },
+      { "quarter": 4, "year": 2022, "values": -838757146290.0 }
+    ],
+    "(+) Tăng, (-) giảm phải trả cho người bán": [
+      { "quarter": 1, "year": 2021, "values": 21644065912.0 },
+      { "quarter": 2, "year": 2021, "values": -10802017488.0 },
+      { "quarter": 3, "year": 2021, "values": -4050865913.0 },
+      { "quarter": 4, "year": 2021, "values": 8493015606.0 },
+      { "quarter": 1, "year": 2022, "values": -6970222053.0 },
+      { "quarter": 2, "year": 2022, "values": 14320315544.0 },
+      { "quarter": 3, "year": 2022, "values": 7257576388.0 },
+      { "quarter": 4, "year": 2022, "values": 278997193502.0 }
+    ],
+    "(+) Tăng, (-) giảm phải trả Tổ chức phát hành chứng khoán": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": 0.0 },
+      { "quarter": 4, "year": 2021, "values": 0.0 },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "(+) Tăng, (-) giảm thuế và các khoản phải nộp Nhà nước": [
+      { "quarter": 1, "year": 2021, "values": 7779779000.0 },
+      { "quarter": 2, "year": 2021, "values": 35363756838.0 },
+      { "quarter": 3, "year": 2021, "values": -6168720548.0 },
+      { "quarter": 4, "year": 2021, "values": 36573871948.0 },
+      { "quarter": 1, "year": 2022, "values": -20749237477.0 },
+      { "quarter": 2, "year": 2022, "values": -39791399854.0 },
+      { "quarter": 3, "year": 2022, "values": -17523008366.0 },
+      { "quarter": 4, "year": 2022, "values": 29485754047.0 }
+    ],
+    "(+) Tăng, (-) giảm phải trả, phải nộp khác": [
+      { "quarter": 1, "year": 2021, "values": 465344099451.0 },
+      { "quarter": 2, "year": 2021, "values": 264153277591.0 },
+      { "quarter": 3, "year": 2021, "values": -978345880261.0 },
+      { "quarter": 4, "year": 2021, "values": 4098717747775.0 },
+      { "quarter": 1, "year": 2022, "values": -3477361923202.0 },
+      { "quarter": 2, "year": 2022, "values": 261180351871.0 },
+      { "quarter": 3, "year": 2022, "values": -307674773994.0 },
+      { "quarter": 4, "year": 2022, "values": -187726691575.0 }
+    ],
+    "(+) Tăng, (-) giảm Thuế TNDN CTCK đã nộp": [
+      { "quarter": 1, "year": 2021, "values": -56725643577.0 },
+      { "quarter": 2, "year": 2021, "values": -105825967093.0 },
+      { "quarter": 3, "year": 2021, "values": -156473723023.0 },
+      { "quarter": 4, "year": 2021, "values": -165409621339.0 },
+      { "quarter": 1, "year": 2022, "values": -235743202992.0 },
+      { "quarter": 2, "year": 2022, "values": -202667001965.0 },
+      { "quarter": 3, "year": 2022, "values": -109464251312.0 },
+      { "quarter": 4, "year": 2022, "values": -100110894441.0 }
+    ],
+    "Lưu chuyển tiền thuần từ hoạt động kinh doanh": [
+      { "quarter": 1, "year": 2021, "values": -781810747836.0 },
+      { "quarter": 2, "year": 2021, "values": -4371888776500.0 },
+      { "quarter": 3, "year": 2021, "values": -5650194586261.0 },
+      { "quarter": 4, "year": 2021, "values": 384577821048.0 },
+      { "quarter": 1, "year": 2022, "values": -4498902642177.0 },
+      { "quarter": 2, "year": 2022, "values": 5438993580957.0 },
+      { "quarter": 3, "year": 2022, "values": -2149712727984.0 },
+      { "quarter": 4, "year": 2022, "values": -5938971316253.0 }
+    ],
+    "Lưu chuyển tiền từ hoạt động đầu tư": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "Tiền chi để mua sắm, xây dựng TSCĐ, BĐSĐT và các tài sản khác": [
+      { "quarter": 1, "year": 2021, "values": -13269750137.0 },
+      { "quarter": 2, "year": 2021, "values": -30775750422.0 },
+      { "quarter": 3, "year": 2021, "values": -27962518231.0 },
+      { "quarter": 4, "year": 2021, "values": -93127004343.0 },
+      { "quarter": 1, "year": 2022, "values": -33889017802.0 },
+      { "quarter": 2, "year": 2022, "values": -55871038790.0 },
+      { "quarter": 3, "year": 2022, "values": -49387376965.0 },
+      { "quarter": 4, "year": 2022, "values": -41188720409.0 }
+    ],
+    "Tiền thu từ thanh lý, nhượng bán TSCĐ, BĐSĐT và các tài sản khác": [
+      { "quarter": 1, "year": 2021, "values": 12636363.0 },
+      { "quarter": 2, "year": 2021, "values": 500000000.0 },
+      { "quarter": 3, "year": 2021, "values": 0.0 },
+      { "quarter": 4, "year": 2021, "values": 0.0 },
+      { "quarter": 1, "year": 2022, "values": 32781818.0 },
+      { "quarter": 2, "year": 2022, "values": 0.0 },
+      { "quarter": 3, "year": 2022, "values": 6190910.0 },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "Tiền chi đầu tư vốn vào công ty con, công ty liên doanh, liên kết và đầu tư khác": [
+      { "quarter": 1, "year": 2021, "values": -250000000000.0 },
+      { "quarter": 2, "year": 2021, "values": -1852929700000.0 },
+      { "quarter": 3, "year": 2021, "values": -3010000000000.0 },
+      { "quarter": 4, "year": 2021, "values": -23312500000.0 },
+      { "quarter": 1, "year": 2022, "values": -250000000000.0 },
+      { "quarter": 2, "year": 2022, "values": 0.0 },
+      { "quarter": 3, "year": 2022, "values": -2650000000000.0 },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "Tiền thanh lý các khoản đầu tư vào công ty con, công ty liên doanh, liên kết và đầu tư khác": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": 2600000000000.0 },
+      { "quarter": 3, "year": 2021, "values": 2600000000000.0 },
+      { "quarter": 4, "year": 2021, "values": 2374642230999.0 },
+      { "quarter": 1, "year": 2022, "values": 2250000000000.0 },
+      { "quarter": 2, "year": 2022, "values": 1390327500000.0 },
+      { "quarter": 3, "year": 2022, "values": 3000000000000.0 },
+      { "quarter": 4, "year": 2022, "values": 268936469827.0 }
+    ],
+    "Tiền thu về cổ tức và lợi nhuận được chia": [
+      { "quarter": 1, "year": 2021, "values": 83397541702.0 },
+      { "quarter": 2, "year": 2021, "values": 174323506865.0 },
+      { "quarter": 3, "year": 2021, "values": 145338958918.0 },
+      { "quarter": 4, "year": 2021, "values": 163688767133.0 },
+      { "quarter": 1, "year": 2022, "values": 39305479462.0 },
+      { "quarter": 2, "year": 2022, "values": 29911397259.0 },
+      { "quarter": 3, "year": 2022, "values": 180900000000.0 },
+      { "quarter": 4, "year": 2022, "values": 9809589000.0 }
+    ],
+    "Lưu chuyển tiền thuần từ hoạt động đầu tư": [
+      { "quarter": 1, "year": 2021, "values": -179859572072.0 },
+      { "quarter": 2, "year": 2021, "values": 891118056443.0 },
+      { "quarter": 3, "year": 2021, "values": -292623559313.0 },
+      { "quarter": 4, "year": 2021, "values": 2421891493789.0 },
+      { "quarter": 1, "year": 2022, "values": 2005449243478.0 },
+      { "quarter": 2, "year": 2022, "values": 1364367858469.0 },
+      { "quarter": 3, "year": 2022, "values": 481518813945.0 },
+      { "quarter": 4, "year": 2022, "values": 237557338418.0 }
+    ],
+    "Lưu chuyển tiền từ hoạt động tài chính": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": 90540000000.0 },
+      { "quarter": 3, "year": 2021, "values": 0.0 },
+      { "quarter": 4, "year": 2021, "values": 1111796556685.0 },
+      { "quarter": 1, "year": 2022, "values": 141660000000.0 },
+      { "quarter": 2, "year": 2022, "values": 45500000000.0 },
+      { "quarter": 3, "year": 2022, "values": 7445628625000.0 },
+      { "quarter": 4, "year": 2022, "values": -4800000000.0 }
+    ],
+    "Tiền chi trả vốn góp cho chủ sở hữu, mua lại cổ phiếu quỹ": [
+      { "quarter": 1, "year": 2021, "values": -229625100.0 },
+      { "quarter": 2, "year": 2021, "values": -229822400.0 },
+      { "quarter": 3, "year": 2021, "values": -19383300.0 },
+      { "quarter": 4, "year": 2021, "values": -670928250.0 },
+      { "quarter": 1, "year": 2022, "values": -1189010450.0 },
+      { "quarter": 2, "year": 2022, "values": -141700450.0 },
+      { "quarter": 3, "year": 2022, "values": -36518500.0 },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "Tiền vay gốc": [
+      { "quarter": 1, "year": 2021, "values": 35066339865830.0 },
+      { "quarter": 2, "year": 2021, "values": 43415689676511.0 },
+      { "quarter": 3, "year": 2021, "values": 97493538392521.0 },
+      { "quarter": 4, "year": 2021, "values": 78672192843154.0 },
+      { "quarter": 1, "year": 2022, "values": 81789184727236.0 },
+      { "quarter": 2, "year": 2022, "values": 87154777056286.0 },
+      { "quarter": 3, "year": 2022, "values": 90716681687379.0 },
+      { "quarter": 4, "year": 2022, "values": 79625916656251.0 }
+    ],
+    "1. Tiền vay Quỹ Hỗ trợ thanh toán": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": 0.0 },
+      { "quarter": 4, "year": 2021, "values": 0.0 },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": 0.0 },
+      { "quarter": 3, "year": 2022, "values": 0.0 },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "2. Tiền vay khác": [
+      { "quarter": 1, "year": 2021, "values": 35066339865830.0 },
+      { "quarter": 2, "year": 2021, "values": 43415689676511.0 },
+      { "quarter": 3, "year": 2021, "values": 97493538392521.0 },
+      { "quarter": 4, "year": 2021, "values": 78672192843154.0 },
+      { "quarter": 1, "year": 2022, "values": 81789184727236.0 },
+      { "quarter": 2, "year": 2022, "values": 87154777056286.0 },
+      { "quarter": 3, "year": 2022, "values": 90716681687379.0 },
+      { "quarter": 4, "year": 2022, "values": 79625916656251.0 }
+    ],
+    "Tiền chi trả nợ gốc vay": [
+      { "quarter": 1, "year": 2021, "values": -34188340581645.0 },
+      { "quarter": 2, "year": 2021, "values": -40060767837878.0 },
+      { "quarter": 3, "year": 2021, "values": -90858272198174.0 },
+      { "quarter": 4, "year": 2021, "values": -81764637493884.0 },
+      { "quarter": 1, "year": 2022, "values": -79745445825058.0 },
+      { "quarter": 2, "year": 2022, "values": -94569925049030.0 },
+      { "quarter": 3, "year": 2022, "values": -95125872469573.0 },
+      { "quarter": 4, "year": 2022, "values": -73117526025214.0 }
+    ],
+    "1. Tiền chi trả gốc vay Quỹ Hỗ trợ thanh toán": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": 0.0 },
+      { "quarter": 4, "year": 2021, "values": 0.0 },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "2. Tiền chi trả nợ gốc vay tài sản tài chính": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": 0.0 },
+      { "quarter": 4, "year": 2021, "values": 0.0 },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "3. Tiền chi trả gốc nợ vay khác": [
+      { "quarter": 1, "year": 2021, "values": -34188340581645.0 },
+      { "quarter": 2, "year": 2021, "values": -40060767837878.0 },
+      { "quarter": 3, "year": 2021, "values": -90858272198174.0 },
+      { "quarter": 4, "year": 2021, "values": -81764637493884.0 },
+      { "quarter": 1, "year": 2022, "values": -79745445825058.0 },
+      { "quarter": 2, "year": 2022, "values": -94569925049030.0 },
+      { "quarter": 3, "year": 2022, "values": -95125872469573.0 },
+      { "quarter": 4, "year": 2022, "values": -73117526025214.0 }
+    ],
+    "Tiền chi trả nợ thuê tài chính": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": 0.0 },
+      { "quarter": 4, "year": 2021, "values": 0.0 },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ],
+    "Cổ tức, lợi nhuận đã trả cho chủ sở hữu": [
+      { "quarter": 1, "year": 2021, "values": -63315000.0 },
+      { "quarter": 2, "year": 2021, "values": -423665000.0 },
+      { "quarter": 3, "year": 2021, "values": -645919707350.0 },
+      { "quarter": 4, "year": 2021, "values": -749776000.0 },
+      { "quarter": 1, "year": 2022, "values": -72745000.0 },
+      { "quarter": 2, "year": 2022, "values": -10372000.0 },
+      { "quarter": 3, "year": 2022, "values": -991049063500.0 },
+      { "quarter": 4, "year": 2022, "values": -7891000.0 }
+    ],
+    "Lưu chuyển tiền thuần từ hoạt động tài chính": [
+      { "quarter": 1, "year": 2021, "values": 877706344085.0 },
+      { "quarter": 2, "year": 2021, "values": 3444808351233.0 },
+      { "quarter": 3, "year": 2021, "values": 5989327103697.0 },
+      { "quarter": 4, "year": 2021, "values": -1982068798295.0 },
+      { "quarter": 1, "year": 2022, "values": 2184137146728.0 },
+      { "quarter": 2, "year": 2022, "values": -7369800065194.0 },
+      { "quarter": 3, "year": 2022, "values": 2045352260806.0 },
+      { "quarter": 4, "year": 2022, "values": 6503582740037.0 }
+    ],
+    "Tăng/giảm tiền thuần trong kỳ": [
+      { "quarter": 1, "year": 2021, "values": -83963975823.0 },
+      { "quarter": 2, "year": 2021, "values": -35962368824.0 },
+      { "quarter": 3, "year": 2021, "values": 46508958123.0 },
+      { "quarter": 4, "year": 2021, "values": 824400516542.0 },
+      { "quarter": 1, "year": 2022, "values": -309316251971.0 },
+      { "quarter": 2, "year": 2022, "values": -566438625768.0 },
+      { "quarter": 3, "year": 2022, "values": 377158346767.0 },
+      { "quarter": 4, "year": 2022, "values": 802168762202.0 }
+    ],
+    "Tiền và các khoản tương đương tiền đầu kỳ": [
+      { "quarter": 1, "year": 2021, "values": 363251901483.0 },
+      { "quarter": 2, "year": 2021, "values": 279287925660.0 },
+      { "quarter": 3, "year": 2021, "values": 243325556836.0 },
+      { "quarter": 4, "year": 2021, "values": 289834514959.0 },
+      { "quarter": 1, "year": 2022, "values": 1114235031501.0 },
+      { "quarter": 2, "year": 2022, "values": 804918779530.0 },
+      { "quarter": 3, "year": 2022, "values": 238480153762.0 },
+      { "quarter": 4, "year": 2022, "values": 615638500529.0 }
+    ],
+    "Tiền gửi ngân hàng đầu kỳ": [
+      { "quarter": 1, "year": 2021, "values": 232339764230.0 },
+      { "quarter": 2, "year": 2021, "values": 225383129365.0 },
+      { "quarter": 3, "year": 2021, "values": 194972363867.0 },
+      { "quarter": 4, "year": 2021, "values": 270197496127.0 },
+      { "quarter": 1, "year": 2022, "values": 475673815170.0 },
+      { "quarter": 2, "year": 2022, "values": 606449040085.0 },
+      { "quarter": 3, "year": 2022, "values": 168024608292.0 },
+      { "quarter": 4, "year": 2022, "values": 513622467623.0 }
+    ],
+    "Các khoản tương đương tiền": [
+      { "quarter": 1, "year": 2021, "values": 54167397260.0 },
+      { "quarter": 2, "year": 2021, "values": 49056109589.0 },
+      { "quarter": 3, "year": 2021, "values": 22030904110.0 },
+      { "quarter": 4, "year": 2021, "values": 640037260272.0 },
+      { "quarter": 1, "year": 2022, "values": 198177643835.0 },
+      { "quarter": 2, "year": 2022, "values": 68102904109.0 },
+      { "quarter": 3, "year": 2022, "values": 98118136987.0 },
+      { "quarter": 4, "year": 2022, "values": 510597750814.0 }
+    ],
+    "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ": [
+      { "quarter": 1, "year": 2021, "values": -262600965.0 },
+      { "quarter": 2, "year": 2021, "values": -702916620.0 },
+      { "quarter": 3, "year": 2021, "values": -2393885278.0 },
+      { "quarter": 4, "year": 2021, "values": -1476043941.0 },
+      { "quarter": 1, "year": 2022, "values": 292095610.0 },
+      { "quarter": 2, "year": 2022, "values": 2352641361.0 },
+      { "quarter": 3, "year": 2022, "values": 3897895919.0 },
+      { "quarter": 4, "year": 2022, "values": 3155957416.0 }
+    ],
+    "Tiền và các khoản tương đương tiền cuối kỳ": [
+      { "quarter": 1, "year": 2021, "values": 279287925660.0 },
+      { "quarter": 2, "year": 2021, "values": 243325556836.0 },
+      { "quarter": 3, "year": 2021, "values": 289834514959.0 },
+      { "quarter": 4, "year": 2021, "values": 1114235031501.0 },
+      { "quarter": 1, "year": 2022, "values": 804918779530.0 },
+      { "quarter": 2, "year": 2022, "values": 238480153762.0 },
+      { "quarter": 3, "year": 2022, "values": 615638500529.0 },
+      { "quarter": 4, "year": 2022, "values": 1417807262731.0 }
+    ],
+    "Tiền gửi ngân hàng cuối kỳ": [
+      { "quarter": 1, "year": 2021, "values": 225383129365.0 },
+      { "quarter": 2, "year": 2021, "values": 194972363867.0 },
+      { "quarter": 3, "year": 2021, "values": 270197496127.0 },
+      { "quarter": 4, "year": 2021, "values": 475673815170.0 },
+      { "quarter": 1, "year": 2022, "values": 606449040085.0 },
+      { "quarter": 2, "year": 2022, "values": 168024608292.0 },
+      { "quarter": 3, "year": 2022, "values": 513622467623.0 },
+      { "quarter": 4, "year": 2022, "values": 904053554501.0 }
+    ]
+  }
+]

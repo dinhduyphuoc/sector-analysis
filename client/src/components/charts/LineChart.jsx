@@ -18,8 +18,11 @@ const ratioOptions = [
 const LineChart = ({ sectors, sectorData }) => {
   // const [interval, setInterval] = useState("Q");
   const { updateSectorsData } = useSectorUpdate();
-  const [index, setRatio] = useState(10);
+  const [ratio, setRatio] = useState(10);
   const [chartOptions, setChartOptions] = useState({
+    accessibility: {
+      enabled: false,
+    },
     chart: {
       backgroundColor: "#20232E",
     },
@@ -31,8 +34,20 @@ const LineChart = ({ sectors, sectorData }) => {
         color: "white",
       },
     },
+    colors: [
+      "#058DC7",
+      "#50B432",
+      "#ED561B",
+      "#DDDF00",
+      "#24CBE5",
+      "#64E572",
+      "#FF9655",
+      "#FFF263",
+      "#6AF9C4",
+    ],
     tooltip: {
       xDateFormat: "%d/%m/%Y",
+      split: true,
     },
     xAxis: {
       type: "datetime",
@@ -46,7 +61,7 @@ const LineChart = ({ sectors, sectorData }) => {
     },
     yAxis: {
       title: {
-        text: "Price",
+        text: ratioOptions.find((r) => r.value === ratio).label,
         style: {
           color: "white",
         },
@@ -71,6 +86,19 @@ const LineChart = ({ sectors, sectorData }) => {
       });
     }
   }, [sectorData, sectors]);
+
+  useEffect(() => {
+    setChartOptions({
+      yAxis: {
+        title: {
+          text: ratioOptions.find((r) => r.value === ratio).label,
+          style: {
+            color: "white",
+          },
+        },
+      },
+    });
+  }, [ratio]);
 
   const handleSelectionChange = (e) => {
     switch (e.target.value) {
@@ -108,16 +136,12 @@ const LineChart = ({ sectors, sectorData }) => {
         <Stack direction="row">
           <SelectSmall
             options={ratioOptions}
-            option={index}
+            option={ratio}
             onChange={handleSelectionChange}
           />
         </Stack>
       </Box>
-      <HighchartsReact
-        containerProps={{ style: { height: "100%" } }}
-        highcharts={Highcharts}
-        options={chartOptions}
-      />
+      <HighchartsReact highcharts={Highcharts} options={chartOptions} />
     </Box>
   );
 };

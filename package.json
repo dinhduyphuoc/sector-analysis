@@ -1,1 +1,7 @@
-{}
+{
+  "dependencies": {
+    "autosuggest-highlight": "^3.3.4",
+    "react-top-loading-bar": "^2.3.1",
+    "ws": "^8.13.0"
+  }
+}

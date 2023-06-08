@@ -75,6 +75,7 @@ const getFundamentalChartInformation = catchAsync(async (req, res) => {
                 ORDER BY 
                     datetime`
     const queryResult: any = await pool.query(query);
+
     const sectorsData = sectors?.map((sector) => {
         return {
             sectorid: sector,
@@ -83,6 +84,7 @@ const getFundamentalChartInformation = catchAsync(async (req, res) => {
             price: queryResult.rows.filter((row: any) => row.sectorid === sector).map((row: any) => row.price)
         }
     })
+
     res.json(sectorsData)
 })
 
