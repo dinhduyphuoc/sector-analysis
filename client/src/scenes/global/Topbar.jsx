@@ -1,11 +1,7 @@
-import { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
-import InputBase from "@mui/material/InputBase";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import SearchIcon from "@mui/icons-material/Search";
-import { ColorModeContext, tokens } from "../../theme";
+import { Box, Typography } from "@mui/material";
+// import { ColorModeContext, tokens } from "../../theme";
 import SearchBar from "../../components/search/SearchBar";
 import { getStocksList } from "../../services/services";
 
@@ -25,9 +21,9 @@ const items = [
 ];
 
 const Topbar = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-  const colorMode = useContext(ColorModeContext);
+  // const theme = useTheme();
+  // const colors = tokens(theme.palette.mode);
+  // const colorMode = useContext(ColorModeContext);
   const [tickers, setTickers] = useState([]);
   const location = useLocation();
   const navigate = useNavigate();

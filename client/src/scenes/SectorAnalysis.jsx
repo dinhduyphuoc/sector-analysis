@@ -1,5 +1,6 @@
+import React from "react";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import {
   Box,
   Card,
@@ -16,334 +17,299 @@ import {
 import RadarChart from "../components/charts/RadarChart";
 import BasicTable from "../components/tables/BasicTable";
 import {
+  getSectorScore,
   getStockInfo,
   getStockLogo,
-  getStocksList,
+  getStockScore,
 } from "../services/services";
-import SearchBar from "../components/search/SearchBar";
-import LoadingBar from "react-top-loading-bar";
-import { useLayoutEffect } from "react";
 import { useLoadingUpdate } from "../contexts/loadingContext";
+import { roundNum } from "../utils/utils";
+import PieScore from "../components/score/PieScore";
 
-const criteria = [
-  {
-    name: "Tốc độ tăng trưởng",
-    fakeData: [
-      {
-        name: "NVL",
-        value: 123,
-      },
-      {
-        name: "Ngành BĐS",
-        value: 9,
-      },
-      {
-        name: "Toàn thị trường",
-        value: 16,
-      },
-    ],
-  },
-  {
-    name: "Định giá",
-    fakeData: [
-      {
-        name: "NVL",
-        value: 456,
-      },
-      {
-        name: "Ngành BĐS",
-        value: 9,
-      },
-      {
-        name: "Toàn thị trường",
-        value: 16,
-      },
-    ],
-  },
-  {
-    name: "Hiệu suất hoạt động",
-    fakeData: [
-      {
-        name: "NVL",
-        value: 6,
-      },
-      {
-        name: "Ngành BĐS",
-        value: 9,
-      },
-      {
-        name: "Toàn thị trường",
-        value: 16,
-      },
-    ],
-  },
-  {
-    name: "Thanh khoản",
-    fakeData: [
-      {
-        name: "NVL",
-        value: 6,
-      },
-      {
-        name: "Ngành BĐS",
-        value: 9,
-      },
-      {
-        name: "Toàn thị trường",
-        value: 16,
-      },
-    ],
-  },
-  {
-    name: "Khả năng quản lý",
-    fakeData: [
-      {
-        name: "NVL",
-        value: 6,
-      },
-      {
-        name: "Ngành BĐS",
-        value: 9,
-      },
-      {
-        name: "Toàn thị trường",
-        value: 16,
-      },
-    ],
-  },
-];
+const fields = {
+  liquidity_score: "Thanh khoản",
+  growth_rate_score: "Tốc độ tăng trưởng",
+  sustainable_management_score: "Quản trị bền vững",
+  valuation_score: "Định giá doanh nghiệp",
+  health_score: "Sức khoẻ tài chính",
+};
 
 const SectorAnalysis = ({ updateProgress }) => {
   const { id } = useParams();
-  const [point, setPoint] = useState(4);
+  const [loading, setLoading] = useState(true);
+  const [point, setPoint] = useState(null);
+  const [criteria, setCriteria] = useState([]);
+  const [chartCriteria, setChartCriteria] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
-  const [tickers, setTickers] = useState([]);
   const [tickerInfo, setTickerInfo] = useState({});
   const { setProgress } = useLoadingUpdate();
-  const navigate = useNavigate();
 
   useEffect(() => {
-    (async () => {
-      const tickerInfo = await getStockInfo(id);
-      setProgress(30);
+    const fetchData = async () => {
+      try {
+        setProgress(10);
+        const tickerInfo = await getStockInfo(id);
 
-      setTickerInfo(tickerInfo);
-      setProgress(100);
-    })();
-  }, []);
+        const [stockScorings, sectorScorings] = await Promise.all([
+          getStockScore(id),
+          getSectorScore(tickerInfo.sectorid),
+        ]);
 
-  useEffect(() => {
-    (async () => {
-      setProgress(30);
-      const tickerInfo = await getStockInfo(id);
-      setProgress(70);
-      setTickerInfo(tickerInfo);
-      setProgress(100);
-    })();
+        const stockAverage = extractAverage(stockScorings);
+        const stockPoint = roundNum(
+          (stockAverage.liquidity_score +
+            stockAverage.growth_rate_score +
+            stockAverage.sustainable_management_score +
+            stockAverage.valuation_score +
+            stockAverage.health_score) /
+            5,
+          1
+        );
+
+        const sectorAverage = extractAverage(sectorScorings);
+
+        const criteria = Object.entries(fields).map(([key, value], index) => ({
+          name: value,
+          data: [
+            {
+              name: id,
+              value: stockAverage[key],
+            },
+            {
+              name: tickerInfo.sectorname,
+              value: sectorAverage[key],
+            },
+            {
+              name: "Toàn thị trường",
+              value: index + 2,
+            },
+          ],
+        }));
+
+        const chartData = [
+          {
+            type: "line",
+            name: id,
+            data: Object.values(stockAverage),
+          },
+          {
+            type: "area",
+            name: tickerInfo.sectorname,
+            data: Object.values(sectorAverage),
+          },
+          {
+            type: "line",
+            name: "Toàn thị trường",
+            data: [2, 3, 4, 5, 6],
+          },
+        ];
+
+        setProgress(30);
+        setCriteria(criteria);
+        setChartCriteria(chartData);
+        setTickerInfo(tickerInfo);
+        setPoint(stockPoint);
+        setProgress(100);
+        setLoading(false);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
   }, [id]);
 
   const handleTabChange = (event, newValue) => {
     setTabIndex(newValue);
   };
 
+  const extractAverage = (scorings) => {
+    const average = {};
+    Object.keys(fields).forEach((field) => {
+      average[field] = 0;
+      scorings.forEach((item) => {
+        average[field] += parseFloat(item[field]);
+      });
+      average[field] = roundNum((average[field] /= scorings.length));
+    });
+
+    return average;
+  };
+
   return (
-    <Box display="flex" flexDirection="column" gap="20px" alignItems="center">
-      <Box
-        width="1000px"
-        display="flex"
-        justifyContent="space-around"
-        gap="20px"
-      >
-        <Box display="flex" gap="20px">
-          <img
-            style={{
-              // make image fit the box above
-              width: "85px",
-              height: "85px",
-              objectFit: "contain",
-              padding: "6px",
-              backgroundColor: "white",
-              borderRadius: "50%",
+    loading || (
+      <Box display="flex" flexDirection="column" gap="20px" alignItems="center">
+        <Box
+          width="1000px"
+          display="flex"
+          justifyContent="space-around"
+          gap="20px"
+        >
+          <Box display="flex" gap="20px">
+            <img
+              style={{
+                // make image fit the box above
+                width: "85px",
+                height: "85px",
+                objectFit: "contain",
+                padding: "6px",
+                backgroundColor: "white",
+                borderRadius: "50%",
+              }}
+              src={getStockLogo(id)}
+              alt="logo"
+            />
+            <Box display="flex" gap="10px" flexDirection="column">
+              <Typography variant="h3" width="400px" fontWeight="700">
+                {tickerInfo.companyname} ({tickerInfo.exchangeid})
+              </Typography>
+              <Typography variant="h4" fontWeight="500">
+                Mã cổ phiếu: {id}
+              </Typography>
+              <Stack direction="row" spacing={1}>
+                <Chip label={tickerInfo.sectorname} variant="outlined" />
+              </Stack>
+            </Box>
+          </Box>
+        </Box>
+        <Box
+          display="flex"
+          justifyContent="center"
+          gap="10px"
+          sx={{
+            height: "100%",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px",
             }}
-            src={getStockLogo(id)}
-          />
-          <Box display="flex" gap="10px" flexDirection="column">
-            <Typography variant="h3" width="400px" fontWeight="700">
-              {tickerInfo.companyname} ({tickerInfo.exchangeid})
-            </Typography>
-            <Typography variant="h4" fontWeight="500">
-              Mã cổ phiếu: {id}
-            </Typography>
-            <Stack direction="row" spacing={1}>
-              <Chip label={tickerInfo.sectorname} variant="outlined" />
-            </Stack>
+          >
+            <Card>
+              <CardHeader
+                sx={{
+                  backgroundColor: "#1c1f27",
+                  textAlign: "center",
+                }}
+                title="Đánh giá tổng thể"
+              />
+              <CardContent
+                sx={{
+                  backgroundColor: "#20232e",
+                }}
+              >
+                <PieScore value={point} />
+                <Box display="flex" justifyContent="center">
+                  Cập nhật lần cuối: 01/06/2023*
+                </Box>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader
+                sx={{
+                  backgroundColor: "#1c1f27",
+                  textAlign: "center",
+                }}
+                title="Bảng điểm chỉ số"
+              />
+              <CardContent
+                sx={{
+                  backgroundColor: "#20232e",
+                }}
+              >
+                <BasicTable
+                  head={[
+                    "Chỉ số",
+                    id,
+                    tickerInfo.sectorname,
+                    "Toàn thị trường",
+                  ]}
+                  data={criteria}
+                  // aggregate="sum"
+                />
+              </CardContent>
+            </Card>
+          </Box>
+          <Box display="flex" flexDirection="column" gap="10px">
+            <Card>
+              <CardHeader
+                sx={{
+                  backgroundColor: "#1c1f27",
+                  textAlign: "center",
+                }}
+                title="Biểu đồ đánh giá"
+              />
+              <CardContent
+                sx={{
+                  backgroundColor: "#20232e",
+                  maxWidth: "500px",
+                  height: "500px",
+                }}
+              >
+                <RadarChart
+                  categories={Object.values(fields)}
+                  chartData={chartCriteria}
+                />
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader
+                sx={{
+                  backgroundColor: "#1c1f27",
+                  textAlign: "center",
+                }}
+                title="Thông tin tổng quan"
+              />
+              <CardContent
+                sx={{
+                  backgroundColor: "#20232e",
+                  maxWidth: "500px",
+                }}
+              >
+                <Tabs
+                  value={tabIndex}
+                  onChange={handleTabChange}
+                  variant="scrollable"
+                  scrollButtons="auto"
+                >
+                  {criteria.map((item, index) => (
+                    <Tab
+                      key={index}
+                      label={
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            textTransform: "none",
+                          }}
+                        >
+                          {item.name}
+                        </Typography>
+                      }
+                    />
+                  ))}
+                </Tabs>
+                <Box margin="10px 10px">
+                  {criteria[tabIndex].data.map((item, index) => (
+                    <ListItem key={index}>
+                      <ListItemText>{item.name}</ListItemText>
+                      <ListItemText
+                        sx={{
+                          textAlign: "right",
+                        }}
+                      >
+                        {item.value}
+                      </ListItemText>
+                    </ListItem>
+                  ))}
+                </Box>
+              </CardContent>
+            </Card>
           </Box>
         </Box>
       </Box>
-      <Box
-        display="flex"
-        justifyContent="center"
-        gap="10px"
-        sx={{
-          height: "100%",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-        >
-          <Card>
-            <CardHeader
-              sx={{
-                backgroundColor: "#1c1f27",
-                textAlign: "center",
-              }}
-              title="Đánh giá tổng thể"
-            />
-            <CardContent
-              sx={{
-                backgroundColor: "#20232e",
-              }}
-            >
-              <Box
-                sx={{
-                  color:
-                    point >= 7 ? "#66bb6a" : point >= 5 ? "#ffc107" : "#eb1d24",
-                  width: "220px",
-                  height: "220px",
-                  // draw background based on point
-                  backgroundImage: `conic-gradient(
-                  ${
-                    point >= 7 ? "#66bb6a" : point >= 5 ? "#ffc107" : "#eb1d24"
-                  } 0% ${point * 10}%,
-                  #20232e ${point * 10}% 
-                )`,
-                  boxShadow: `0 0 15px ${
-                    point >= 7 ? "#66bb6a" : point >= 5 ? "#ffc107" : "#eb1d24"
-                  }`,
-                  userSelect: "none",
-                  borderRadius: "50%",
-                  textAlign: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  margin: "45px auto 30px",
-                  fontSize: "50px",
-                  fontWeight: "700",
-                }}
-              >
-                <Box zIndex="1">{point}&nbsp;/&nbsp;10</Box>
-              </Box>
-              <Box display="flex" justifyContent="center">
-                Cập nhật lần cuối: 01/06/2023*
-              </Box>
-              <ListItem
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                }}
-              >
-                <ListItemText>Chất lượng doanh nghiệp</ListItemText>
-                <ListItemText>Rủi ro</ListItemText>
-                <ListItemText>Định giá</ListItemText>
-              </ListItem>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader
-              sx={{
-                backgroundColor: "#1c1f27",
-                textAlign: "center",
-              }}
-              title="Bảng điểm chỉ số"
-            />
-            <CardContent
-              sx={{
-                backgroundColor: "#20232e",
-              }}
-            >
-              <BasicTable />
-            </CardContent>
-          </Card>
-        </Box>
-        <Box display="flex" flexDirection="column" gap="10px">
-          <Card>
-            <CardHeader
-              sx={{
-                backgroundColor: "#1c1f27",
-                textAlign: "center",
-              }}
-              title="Biểu đồ đánh giá"
-            />
-            <CardContent
-              sx={{
-                backgroundColor: "#20232e",
-                maxWidth: "500px",
-                height: "500px",
-              }}
-            >
-              <RadarChart />
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader
-              sx={{
-                backgroundColor: "#1c1f27",
-                textAlign: "center",
-              }}
-              title="Thông tin tổng quan"
-            />
-            <CardContent
-              sx={{
-                backgroundColor: "#20232e",
-                maxWidth: "500px",
-              }}
-            >
-              <Tabs
-                value={tabIndex}
-                onChange={handleTabChange}
-                variant="scrollable"
-                scrollButtons="auto"
-              >
-                {criteria.map((item, index) => (
-                  <Tab
-                    key={index}
-                    label={
-                      <Typography
-                        sx={{
-                          color: "#fff",
-                          textTransform: "none",
-                        }}
-                      >
-                        {item.name}
-                      </Typography>
-                    }
-                  />
-                ))}
-              </Tabs>
-              <Box margin="10px 10px">
-                {criteria[tabIndex].fakeData.map((item, index) => (
-                  <ListItem key={index}>
-                    <ListItemText>{item.name}</ListItemText>
-                    <ListItemText
-                      sx={{
-                        textAlign: "right",
-                      }}
-                    >
-                      {item.value}
-                    </ListItemText>
-                  </ListItem>
-                ))}
-              </Box>
-            </CardContent>
-          </Card>
-        </Box>
-      </Box>
-    </Box>
+    )
   );
 };
 

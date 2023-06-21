@@ -21,5 +21,7 @@ export const loadingReducer = (state, action) => {
         ...state,
         progress: payload,
       };
+    default:
+      return state;
   }
 };

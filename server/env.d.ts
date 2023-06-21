@@ -1,26 +1,24 @@
 declare global {
-    namespace NodeJS {
-        interface ProcessEnv {
-            NODE_ENV: 'development' | 'production' | 'test';
-            PORT: number;
-            DATABASE_URL: string;
-            POSTGRES_USER: string;
-            POSTGRES_PASSWORD: string;
-            POSTGRES_DB: string;
-            POSTGRES_HOST: string;
-            POSTGRES_PORT: number;
-            POSTGRES_REJECTUNAUTHORIZED: boolean;
-        }
-        interface ChartData {
-            row: {
-                id: number | string;
-                datetime: string[];
-                price: string[];
-            }
-        }
+  namespace NodeJS {
+    interface ProcessEnv {
+      NODE_ENV: "development" | "production" | "test";
+      PORT: number;
+      DATABASE_URL: string;
+      DB_USER: string;
+      DB_PASSWORD: string;
+      DB: string;
+      DB_HOST: string;
+      DB_PORT: number;
+      DB_REJECTUNAUTHORIZED: boolean;
     }
+    interface ChartData {
+      row: {
+        id: number | string;
+        datetime: string[];
+        price: string[];
+      };
+    }
+  }
 }
 
-export {
-    ChartData
-}
+export { ChartData };

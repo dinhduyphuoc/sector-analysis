@@ -88,7 +88,6 @@ function EnhancedTableHead(props) {
     // onSelectAllClick,
     order,
     orderBy,
-    numSelected,
     // rowCount,
     onRequestSort,
   } = props;

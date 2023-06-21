@@ -5,7 +5,7 @@ import HighchartsMore from "highcharts/highcharts-more";
 
 HighchartsMore(Highcharts);
 
-const RadarChart = ({ sectors, sectorData }) => {
+const RadarChart = ({ categories, chartData }) => {
   const [chartOptions, setChartOptions] = useState({
     accessibility: {
       enabled: false,
@@ -26,15 +26,10 @@ const RadarChart = ({ sectors, sectorData }) => {
       },
     },
 
-    pane: {
-      startAngle: 0,
-      endAngle: 360,
-    },
-
     colors: [
       "#058DC7",
       "#50B432",
-      "#ED561B",
+      "#FF6361",
       "#DDDF00",
       "#24CBE5",
       "#64E572",
@@ -43,83 +38,48 @@ const RadarChart = ({ sectors, sectorData }) => {
       "#6AF9C4",
     ],
 
+    tooltip: {
+      backgroundColor: "rgba(26, 35, 50, 1)",
+      borderWidth: 0,
+      outside: true,
+      style: {
+        color: "rgba(164, 177, 205)",
+      },
+      shared: true,
+    },
+
     xAxis: {
-      tickInterval: 72,
-      min: 0,
-      max: 360,
       lineWidth: 0,
       tickmarkPlacement: "on",
       labels: {
         style: {
           color: "white",
         },
-        formatter: function () {
-          let label;
-          switch (this.value) {
-            case 0:
-              label = "Tốc độ tăng trưởng";
-              break;
-            case 72:
-              label = "Định giá";
-              break;
-            case 144:
-              label = "Hiệu suất hoạt động";
-              break;
-            case 216:
-              label = "Thanh khoản";
-              break;
-            case 288:
-              label = "Khả năng quản lý";
-              break;
-          }
-          return label;
-        },
       },
     },
 
     yAxis: {
-      min: 0,
+      gridLineColor: "rgba(164, 177, 205, 0.2)",
+      alternateGridColor: "rgba(164, 177, 205, 0.05)",
       gridLineInterpolation: "polygon",
       style: {
         color: "white",
       },
       labels: {
-        style: {
-          color: "white",
-        },
+        enabled: false,
       },
     },
-
-    plotOptions: {
-      series: {
-        pointStart: 0,
-        pointInterval: 72,
-      },
-      column: {
-        pointPadding: 0,
-        groupPadding: 0,
-      },
-    },
-
-    series: [
-      {
-        type: "line",
-        name: "NVL",
-        data: [1, 2, 3, 4, 5, 6, 7, 8],
-      },
-      {
-        type: "area",
-        name: "Ngành BĐS",
-        data: [8, 7, 6, 5, 4, 3, 2, 1],
-        pointPlacement: "between",
-      },
-      {
-        type: "area",
-        name: "Toàn Thị Trường",
-        data: [1, 8, 2, 7, 3, 6, 4, 5],
-      },
-    ],
   });
+
+  useEffect(() => {
+    setChartOptions({
+      ...chartOptions,
+      series: chartData,
+      xAxis: {
+        categories: categories,
+      },
+    });
+  }, [chartData]);
 
   return (
     <HighchartsReact

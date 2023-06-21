@@ -1,18 +1,15 @@
-import React, { useState, useEffect, useContext } from "react";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import React, { useState, useEffect } from "react";
 import { Box } from "@mui/system";
-import { useTheme } from "@mui/material";
 import LineChart from "../components/charts/LineChart";
 import { convertISO8601ToMilliseconds, roundNum } from "../utils/utils";
 import EnhancedTable from "../components/tables/EnhancedTable";
-import { ColorModeContext, tokens } from "../theme";
 import { useSector, useSectorUpdate } from "../contexts/sectorContext";
 import { useLoadingUpdate } from "../contexts/loadingContext";
 
 const DashBoard = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-  const colorMode = useContext(ColorModeContext);
+  // const theme = useTheme();
+  // const colors = tokens(theme.palette.mode);
+  // const colorMode = useContext(ColorModeContext);
   const { sectors, sectorsState, sectorsData } = useSector();
   const { initSectors } = useSectorUpdate();
   const { setProgress } = useLoadingUpdate();

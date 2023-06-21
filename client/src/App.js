@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Container } from "@mui/system";
@@ -7,7 +7,6 @@ import Topbar from "./scenes/global/Topbar";
 import DashBoard from "./scenes/DashBoard";
 import { useLoading, useLoadingUpdate } from "./contexts/loadingContext";
 import SectorProvider from "./contexts/sectorContext";
-import LoadingProvider from "./contexts/loadingContext";
 import SectorAnalysis from "./scenes/SectorAnalysis";
 import LoadingBar from "react-top-loading-bar";
 

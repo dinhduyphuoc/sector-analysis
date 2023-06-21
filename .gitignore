@@ -134,3 +134,7 @@ dist
 
 # local volumes
 pgdata/
+
+# local python env
+__pycache__/
+venv/

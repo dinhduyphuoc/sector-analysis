@@ -6,32 +6,22 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("Tốc độ tăng trưởng", 159, 6.0, 24),
-  createData("Định giá", 237, 9.0, 37),
-  createData("Hiệu suất hoạt động", 262, 16.0, 24),
-  createData("Thanh khoản", 305, 3.7, 67),
-  createData("Khả năng quản lý", 356, 16.0, 49),
-];
-
-export default function BasicTable() {
+export default function BasicTable({ head, data, aggregate }) {
   return (
     <TableContainer>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Chỉ số</TableCell>
-            <TableCell align="right">NVL</TableCell>
-            <TableCell align="right">Ngành BĐS</TableCell>
-            <TableCell align="right">Toàn thị trường</TableCell>
+            <TableCell>{head[0] !== undefined ? head[0] : ""}</TableCell>
+            {head.slice(1).map((head) => (
+              <TableCell key={head} align="right">
+                {head}
+              </TableCell>
+            ))}
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {data.map((row) => (
             <TableRow
               key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
@@ -39,23 +29,24 @@ export default function BasicTable() {
               <TableCell component="th" scope="column">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
+              {row.data.map((data) => (
+                <TableCell key={data.value} align="right">
+                  {data.value}
+                </TableCell>
+              ))}
             </TableRow>
           ))}
-          <TableRow
-            sx={{
-              "&:last-child td, &:last-child th,": { border: 0 },
-            }}
-          >
-            <TableCell component="th" scope="column">
-              Tổng cộng
-            </TableCell>
-            <TableCell align="right">1</TableCell>
-            <TableCell align="right">2</TableCell>
-            <TableCell align="right">3</TableCell>
-          </TableRow>
+          {aggregate && (
+            <TableRow
+              sx={{
+                "&:last-child td, &:last-child th,": { border: 0 },
+              }}
+            >
+              <TableCell component="th" scope="column">
+                {aggregate === "average" ? "Trung bình" : "Tổng"}
+              </TableCell>
+            </TableRow>
+          )}
         </TableBody>
       </Table>
     </TableContainer>

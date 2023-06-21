@@ -2,14 +2,14 @@ import Express, { Request, Response } from "express";
 import cors from "cors";
 import { config } from "dotenv";
 import pool from "./models/db";
-import { router } from "./routes/v1";
+import { router } from "./v1/routes";
 
 config();
 const app = Express();
 const port: number = process.env.PORT || 3000;
 
 app.use(Express.json());
-app.use(cors())
+app.use(cors());
 
 pool.connect();
 
@@ -28,11 +28,10 @@ app.get("/test", (req: Request, res: Response) => {
 
     res.send(result.rows);
   });
-})
+});
 
 // const date = new Date().toISOString().slice(0, 10);
 // console.log(date);
-
 
 app.use("/v1/", router);
 

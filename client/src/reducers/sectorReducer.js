@@ -43,5 +43,7 @@ export const sectorReducer = (state, action) => {
         ...state,
         sectorsData: payload,
       };
+    default:
+      return state;
   }
 };
