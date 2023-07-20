@@ -1,3 +1,4 @@
+import { sectorsList } from "../constants/constants";
 import http from "../utils/httpUtils";
 
 const host = "http://localhost:8000/v1";
@@ -21,9 +22,9 @@ export const getStockScore = async (ticker) => {
   return data;
 };
 
-export const getSectorsList = async () => {
-  const { data } = await http.get(`${host}/sector/list`);
-  return data;
+export const getSectorsList = () => {
+  const sectors = sectorsList;
+  return sectors;
 };
 
 export const getSectorsFundamentalData = async () => {
@@ -31,16 +32,16 @@ export const getSectorsFundamentalData = async () => {
   return data;
 };
 
-export const getSectorsChartFundamentalData = async (
-  sectorsId,
+export const getDailyChartFundamentalData = async (
+  id,
+  type,
   ratio = "pe",
+  interval = "daily",
   startDate = "2010-01-01",
   endDate = ""
 ) => {
-  const joined =
-    typeof sectorsId === "number" ? sectorsId : sectorsId.join(",");
   const { data } = await http.get(
-    `${host}/chart/fundamental?ratio=${ratio}&sectorid=${joined}&startDate=${startDate}&endDate=${endDate}`
+    `${host}/chart/fundamental?id=${id}&ratio=${ratio}&interval=${interval}&type=${type}&startDate=${startDate}&endDate=${endDate}`
   );
   return data;
 };
@@ -48,4 +49,9 @@ export const getSectorsChartFundamentalData = async (
 export const getSectorScore = async (sectorId) => {
   const { data } = await http.get(`${host}/sector/score/${sectorId}`);
   return data;
+};
+
+const isDailyData = (ratio) => {
+  if (["pe", "pb"].includes(ratio)) return true;
+  return false;
 };

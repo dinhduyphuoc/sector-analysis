@@ -50,9 +50,9 @@ const SectorAnalysis = ({ updateProgress }) => {
         setProgress(10);
         const tickerInfo = await getStockInfo(id);
 
-        const [stockScorings, sectorScorings] = await Promise.all([
+        const [stockScorings] = await Promise.all([
           getStockScore(id),
-          getSectorScore(tickerInfo.sectorid),
+          // getSectorScore(tickerInfo.sectorid),
         ]);
 
         const stockAverage = extractAverage(stockScorings);
@@ -66,7 +66,7 @@ const SectorAnalysis = ({ updateProgress }) => {
           1
         );
 
-        const sectorAverage = extractAverage(sectorScorings);
+        // const sectorAverage = extractAverage(sectorScorings);
 
         const criteria = Object.entries(fields).map(([key, value], index) => ({
           name: value,
@@ -75,10 +75,10 @@ const SectorAnalysis = ({ updateProgress }) => {
               name: id,
               value: stockAverage[key],
             },
-            {
-              name: tickerInfo.sectorname,
-              value: sectorAverage[key],
-            },
+            // {
+            //   name: tickerInfo.sectorname,
+            //   value: sectorAverage[key],
+            // },
             {
               name: "Toàn thị trường",
               value: index + 2,
@@ -92,11 +92,11 @@ const SectorAnalysis = ({ updateProgress }) => {
             name: id,
             data: Object.values(stockAverage),
           },
-          {
-            type: "area",
-            name: tickerInfo.sectorname,
-            data: Object.values(sectorAverage),
-          },
+          // {
+          //   type: "area",
+          //   name: tickerInfo.sectorname,
+          //   data: Object.values(sectorAverage),
+          // },
           {
             type: "line",
             name: "Toàn thị trường",
@@ -166,9 +166,9 @@ const SectorAnalysis = ({ updateProgress }) => {
               <Typography variant="h4" fontWeight="500">
                 Mã cổ phiếu: {id}
               </Typography>
-              <Stack direction="row" spacing={1}>
+              {/* <Stack direction="row" spacing={1}>
                 <Chip label={tickerInfo.sectorname} variant="outlined" />
-              </Stack>
+              </Stack> */}
             </Box>
           </Box>
         </Box>
@@ -223,7 +223,7 @@ const SectorAnalysis = ({ updateProgress }) => {
                   head={[
                     "Chỉ số",
                     id,
-                    tickerInfo.sectorname,
+                    // tickerInfo.sectorname,
                     "Toàn thị trường",
                   ]}
                   data={criteria}

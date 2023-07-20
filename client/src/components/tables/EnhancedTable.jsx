@@ -134,12 +134,15 @@ EnhancedTableHead.propTypes = {
   rowCount: PropTypes.number.isRequired,
 };
 
-export default function EnhancedTable({ sectors, sectorsState }) {
+export default function EnhancedTable({
+  sectors,
+  sectorsState,
+  onSectorOptionChange,
+}) {
   // Theme
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
-  const { toggleSector } = useSectorUpdate();
   const [rows, setRows] = React.useState([]);
   const [order, setOrder] = React.useState(DEFAULT_ORDER);
   const [orderBy, setOrderBy] = React.useState(DEFAULT_ORDER_BY);
@@ -212,10 +215,6 @@ export default function EnhancedTable({ sectors, sectorsState }) {
     [order, rows, orderBy, rowsPerPage]
   );
 
-  const handleClickOption = (sectorid) => {
-    toggleSector(sectorid);
-  };
-
   const handleChangeRowsPerPage = React.useCallback(
     (event) => {
       const updatedRowsPerPage = parseInt(event.target.value, 10);
@@ -267,7 +266,7 @@ export default function EnhancedTable({ sectors, sectorsState }) {
                     return (
                       <TableRow
                         hover
-                        onClick={(event) => handleClickOption(row.sectorid)}
+                        onClick={(event) => onSectorOptionChange(row.sectorid)}
                         role="checkbox"
                         aria-checked={isItemSelected}
                         tabIndex={-1}

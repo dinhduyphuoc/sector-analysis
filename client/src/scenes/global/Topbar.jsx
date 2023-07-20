@@ -15,15 +15,12 @@ const items = [
     path: "/sector-analysis",
   },
   {
-    name: "Stocks",
-    path: "/stocks",
+    name: "Prediction",
+    path: "/predict",
   },
 ];
 
 const Topbar = () => {
-  // const theme = useTheme();
-  // const colors = tokens(theme.palette.mode);
-  // const colorMode = useContext(ColorModeContext);
   const [tickers, setTickers] = useState([]);
   const location = useLocation();
   const navigate = useNavigate();
@@ -65,7 +62,7 @@ const Topbar = () => {
   return (
     <Box
       display="flex"
-      margin="0px 57px"
+      margin="25px 57px"
       padding="10px 44px"
       alignItems="center"
     >
@@ -85,7 +82,7 @@ const Topbar = () => {
           {item.name}
         </Link>
       ))}
-      {/* ICONS */}
+      {/* ICONS
       <Box display="flex" marginLeft="auto">
         <SearchBar
           options={tickers}
@@ -94,7 +91,7 @@ const Topbar = () => {
           onInput={handleInput}
           label="Nhập mã cổ phiếu"
         />
-      </Box>
+      </Box> */}
     </Box>
   );
 };

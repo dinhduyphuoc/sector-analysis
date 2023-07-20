@@ -1,7 +1,7 @@
 import React, { createContext, useReducer, useContext } from "react";
 import {
   getSectorsList,
-  getSectorsChartFundamentalData,
+  getDailyChartFundamentalData,
 } from "../services/services";
 import {
   initialState,
@@ -25,7 +25,7 @@ const SectorProvider = ({ children }) => {
 
   const initSectors = async (sectorsState) => {
     const sectors = await getSectorsList();
-    const sectorsData = await getSectorsChartFundamentalData(sectorsState);
+    const sectorsData = await getDailyChartFundamentalData(sectorsState);
     dispatch({
       type: ACTIONS.INIT_SECTORS,
       payload: { sectors, sectorsState, sectorsData },
@@ -34,14 +34,14 @@ const SectorProvider = ({ children }) => {
 
   const updateSectorsData = async (ratio, startDate = "", endDate = "") => {
     const sectorsState = state.sectorsState;
-    const sectorsData = await getSectorsChartFundamentalData(
+    const sectorsData = await getDailyChartFundamentalData(
       sectorsState,
       ratio,
       startDate,
       endDate
     );
     dispatch({
-      type: ACTIONS.UPDATE_SECTORS,
+      type: ACTIONS.GET_SECTORS,
       payload: sectorsData,
     });
   };
@@ -56,7 +56,7 @@ const SectorProvider = ({ children }) => {
     // If the sector is not selected
     if (selectedIndex === -1) {
       // Get sector data, add to state & update selected state
-      const sectorData = await getSectorsChartFundamentalData(sectorId);
+      const sectorData = await getDailyChartFundamentalData(sectorId);
       dispatch({
         type: ACTIONS.ADD_SECTOR,
         payload: sectorData[0],

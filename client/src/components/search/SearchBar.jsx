@@ -3,11 +3,11 @@ import { Autocomplete, TextField } from "@mui/material";
 import parse from "autosuggest-highlight/parse";
 import match from "autosuggest-highlight/match";
 
-const SearchBar = ({ options, label, onKeyDown, onChange, onInput }) => {
+const SearchBar = ({ options, label, onKeyDown, onChange, onInput, sx }) => {
   return (
     <Autocomplete
       id="search_bar"
-      sx={{ width: 300 }}
+      sx={sx}
       options={options}
       getOptionLabel={(option) => option.name}
       onInput={onInput}

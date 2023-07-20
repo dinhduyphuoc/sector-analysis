@@ -4,7 +4,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Container } from "@mui/system";
 import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./scenes/global/Topbar";
-import DashBoard from "./scenes/DashBoard";
+import SectorsFundamental from "./scenes/SectorsFundamental";
 import { useLoading, useLoadingUpdate } from "./contexts/loadingContext";
 import SectorProvider from "./contexts/sectorContext";
 import SectorAnalysis from "./scenes/SectorAnalysis";
@@ -32,7 +32,7 @@ function App() {
                 path="/"
                 element={<Navigate replace to="/fundamental" />}
               />
-              <Route path="/fundamental" element={<DashBoard />} />
+              <Route path="/fundamental" element={<SectorsFundamental />} />
               <Route
                 path="/sector-analysis/"
                 element={<Navigate replace to="/sector-analysis/NVL" />}
