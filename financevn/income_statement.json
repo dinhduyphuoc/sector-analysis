@@ -1,0 +1,1094 @@
+[
+  {
+    "tickersymbol": "SSI",
+    "name": "DOANH THU HOẠT ĐỘNG",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "1. Lãi từ các tài sản tài chính ghi nhận thông qua lãi/lỗ (FVTPL)",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 600137348817.0 },
+      { "quarter": 2, "year": 2021, "values": 594579551041.0 },
+      { "quarter": 3, "year": 2021, "values": 335076890453.0 },
+      { "quarter": 4, "year": 2021, "values": 795452676970.0 },
+      { "quarter": 1, "year": 2022, "values": 625397120699.0 },
+      { "quarter": 2, "year": 2022, "values": 427355468834.0 },
+      { "quarter": 3, "year": 2022, "values": 441311011765.0 },
+      { "quarter": 4, "year": 2022, "values": 526203768831.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Lãi bán các tài sản tài chính",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 394761347562.0 },
+      { "quarter": 2, "year": 2021, "values": 359730539639.0 },
+      { "quarter": 3, "year": 2021, "values": 155018889542.0 },
+      { "quarter": 4, "year": 2021, "values": 450314284075.0 },
+      { "quarter": 1, "year": 2022, "values": 357744712293.0 },
+      { "quarter": 2, "year": 2022, "values": 216894967463.0 },
+      { "quarter": 3, "year": 2022, "values": 195794878666.0 },
+      { "quarter": 4, "year": 2022, "values": 216829505628.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Chênh lệch tăng đánh giá lại các TSTC thông qua lãi/lỗ",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 82928105562.0 },
+      { "quarter": 2, "year": 2021, "values": 99985986972.0 },
+      { "quarter": 3, "year": 2021, "values": 75329004152.0 },
+      { "quarter": 4, "year": 2021, "values": 248260641071.0 },
+      { "quarter": 1, "year": 2022, "values": 89695266389.0 },
+      { "quarter": 2, "year": 2022, "values": 44268543223.0 },
+      { "quarter": 3, "year": 2022, "values": 17261500718.0 },
+      { "quarter": 4, "year": 2022, "values": 41115115633.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Cổ tức, tiền lãi phát sinh từ tài sản tài chính PVTPL",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 122447895693.0 },
+      { "quarter": 2, "year": 2021, "values": 134863024430.0 },
+      { "quarter": 3, "year": 2021, "values": 104728996759.0 },
+      { "quarter": 4, "year": 2021, "values": 96877751824.0 },
+      { "quarter": 1, "year": 2022, "values": 177957142017.0 },
+      { "quarter": 2, "year": 2022, "values": 166191958148.0 },
+      { "quarter": 3, "year": 2022, "values": 228254632381.0 },
+      { "quarter": 4, "year": 2022, "values": 268259147570.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "2. Lãi từ các khoản đầu tư nắm giữ đến ngày đáo hạn (HTM)",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 171499122085.0 },
+      { "quarter": 2, "year": 2021, "values": 157539454479.0 },
+      { "quarter": 3, "year": 2021, "values": 216078860691.0 },
+      { "quarter": 4, "year": 2021, "values": 175244987369.0 },
+      { "quarter": 1, "year": 2022, "values": 130454819231.0 },
+      { "quarter": 2, "year": 2022, "values": 123403390964.0 },
+      { "quarter": 3, "year": 2022, "values": 81508736753.0 },
+      { "quarter": 4, "year": 2022, "values": 81846366507.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "3. Lãi từ các khoản cho vay và phải thu",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 245579949872.0 },
+      { "quarter": 2, "year": 2021, "values": 337960307642.0 },
+      { "quarter": 3, "year": 2021, "values": 431635498617.0 },
+      { "quarter": 4, "year": 2021, "values": 555565275606.0 },
+      { "quarter": 1, "year": 2022, "values": 566429306766.0 },
+      { "quarter": 2, "year": 2022, "values": 482973641867.0 },
+      { "quarter": 3, "year": 2022, "values": 406133381399.0 },
+      { "quarter": 4, "year": 2022, "values": 345345969834.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "4. Lãi từ các tài sản tài chính sẵn sàng để bán (AFS)",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 0.0 },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": 555220000.0 },
+      { "quarter": 4, "year": 2021, "values": 279255000.0 },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": 2609491226.0 },
+      { "quarter": 3, "year": 2022, "values": 75213151.0 },
+      { "quarter": 4, "year": 2022, "values": 168298151.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "5. Lãi từ các công cụ phái sinh phòng ngừa rủi ro",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 0.0 },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "6. Doanh thu môi giới chứng khoán",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 436543995623.0 },
+      { "quarter": 2, "year": 2021, "values": 623266154850.0 },
+      { "quarter": 3, "year": 2021, "values": 667142086942.0 },
+      { "quarter": 4, "year": 2021, "values": 792058077154.0 },
+      { "quarter": 1, "year": 2022, "values": 599448577320.0 },
+      { "quarter": 2, "year": 2022, "values": 449430423696.0 },
+      { "quarter": 3, "year": 2022, "values": 339022060952.0 },
+      { "quarter": 4, "year": 2022, "values": 318757045096.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "7. Doanh thu bảo lãnh, đại lý phát hành chứng khoán",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 12141818182.0 },
+      { "quarter": 2, "year": 2021, "values": 2960000000.0 },
+      { "quarter": 3, "year": 2021, "values": 4640000000.0 },
+      { "quarter": 4, "year": 2021, "values": 8285000000.0 },
+      { "quarter": 1, "year": 2022, "values": 20147000000.0 },
+      { "quarter": 2, "year": 2022, "values": 9521545454.0 },
+      { "quarter": 3, "year": 2022, "values": 1989000000.0 },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "8. Doanh thu tư vấn",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 3185816330.0 },
+      { "quarter": 2, "year": 2021, "values": 10464139711.0 },
+      { "quarter": 3, "year": 2021, "values": 33377931471.0 },
+      { "quarter": 4, "year": 2021, "values": 31731413502.0 },
+      { "quarter": 1, "year": 2022, "values": 7793698595.0 },
+      { "quarter": 2, "year": 2022, "values": 31149255104.0 },
+      { "quarter": 3, "year": 2022, "values": 15057179219.0 },
+      { "quarter": 4, "year": 2022, "values": 18869020345.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "9. Doanh thu hoạt động nhận ủy thác, đấu giá",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 0.0 },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "10. Doanh thu lưu ký chứng khoán",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 8842147383.0 },
+      { "quarter": 2, "year": 2021, "values": 8186662523.0 },
+      { "quarter": 3, "year": 2021, "values": 9299538565.0 },
+      { "quarter": 4, "year": 2021, "values": 10081391291.0 },
+      { "quarter": 1, "year": 2022, "values": 9112801702.0 },
+      { "quarter": 2, "year": 2022, "values": 9415062884.0 },
+      { "quarter": 3, "year": 2022, "values": 10400941292.0 },
+      { "quarter": 4, "year": 2022, "values": 10819639058.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "11. Thu nhập hoạt động khác",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 27649483773.0 },
+      { "quarter": 2, "year": 2021, "values": 31233645471.0 },
+      { "quarter": 3, "year": 2021, "values": 50281427144.0 },
+      { "quarter": 4, "year": 2021, "values": 54626782956.0 },
+      { "quarter": 1, "year": 2022, "values": 48776444583.0 },
+      { "quarter": 2, "year": 2022, "values": 93227641325.0 },
+      { "quarter": 3, "year": 2022, "values": 52469300527.0 },
+      { "quarter": 4, "year": 2022, "values": 49200434830.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Cộng doanh thu hoạt động",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 1505579682065.0 },
+      { "quarter": 2, "year": 2021, "values": 1766189915717.0 },
+      { "quarter": 3, "year": 2021, "values": 1748087453883.0 },
+      { "quarter": 4, "year": 2021, "values": 2423324859848.0 },
+      { "quarter": 1, "year": 2022, "values": 2007559768896.0 },
+      { "quarter": 2, "year": 2022, "values": 1629085921354.0 },
+      { "quarter": 3, "year": 2022, "values": 1347966825058.0 },
+      { "quarter": 4, "year": 2022, "values": 1351210542652.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "CHI PHÍ HOẠT ĐỘNG",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "1. Lỗ các tài sản tài chính ghi nhận thông qua lãi/lỗ (FVTPL)",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 384150251911.0 },
+      { "quarter": 2, "year": 2021, "values": 305529006243.0 },
+      { "quarter": 3, "year": 2021, "values": 224957413791.0 },
+      { "quarter": 4, "year": 2021, "values": 427553938994.0 },
+      { "quarter": 1, "year": 2022, "values": 322375955501.0 },
+      { "quarter": 2, "year": 2022, "values": 276246170756.0 },
+      { "quarter": 3, "year": 2022, "values": 166172159544.0 },
+      { "quarter": 4, "year": 2022, "values": 196795870764.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Lỗ bán các tài sản tài chính",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 288271127187.0 },
+      { "quarter": 2, "year": 2021, "values": 217499296206.0 },
+      { "quarter": 3, "year": 2021, "values": 143729413971.0 },
+      { "quarter": 4, "year": 2021, "values": 345617056229.0 },
+      { "quarter": 1, "year": 2022, "values": 117536094171.0 },
+      { "quarter": 2, "year": 2022, "values": 180154833567.0 },
+      { "quarter": 3, "year": 2022, "values": 79305588944.0 },
+      { "quarter": 4, "year": 2022, "values": 152633466528.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Chênh lệch giảm đánh giá lại các TSTC thông qua lãi/lỗ",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 94405745070.0 },
+      { "quarter": 2, "year": 2021, "values": 86889482087.0 },
+      { "quarter": 3, "year": 2021, "values": 80158123490.0 },
+      { "quarter": 4, "year": 2021, "values": 79829932064.0 },
+      { "quarter": 1, "year": 2022, "values": 203728114504.0 },
+      { "quarter": 2, "year": 2022, "values": 95084101689.0 },
+      { "quarter": 3, "year": 2022, "values": 86272702831.0 },
+      { "quarter": 4, "year": 2022, "values": 43604297205.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "c.Chi phí giao dịch mua các tài sản tài chính FVTPL",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 1473379654.0 },
+      { "quarter": 2, "year": 2021, "values": 1140227950.0 },
+      { "quarter": 3, "year": 2021, "values": 1069876330.0 },
+      { "quarter": 4, "year": 2021, "values": 2106950701.0 },
+      { "quarter": 1, "year": 2022, "values": 1111746826.0 },
+      { "quarter": 2, "year": 2022, "values": 1007235500.0 },
+      { "quarter": 3, "year": 2022, "values": 593867769.0 },
+      { "quarter": 4, "year": 2022, "values": 558107031.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "2. Lỗ các khoản đầu tư nắm giữ đến ngày đáo hạn (HTM)",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 929243500.0 },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "3. Chi phí lãi vay, lỗ từ các khoản cho vay và phải thu",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": -9989360387.0 },
+      { "quarter": 2, "year": 2021, "values": 479031587.0 },
+      { "quarter": 3, "year": 2021, "values": -13349887290.0 },
+      { "quarter": 4, "year": 2021, "values": -20456076857.0 },
+      { "quarter": 1, "year": 2022, "values": -10231383.0 },
+      { "quarter": 2, "year": 2022, "values": -1219960095.0 },
+      { "quarter": 3, "year": 2022, "values": -2251762.0 },
+      { "quarter": 4, "year": 2022, "values": -631904000.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "4. Lỗ bán các tài sản tài chính sẵn sàng để bán (AFS)",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 0.0 },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "5. Lỗ từ các tài sản tài chính phái sinh phòng ngừa rủi ro",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 0.0 },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "6. Chi phí hoạt động tự doanh",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 6630356600.0 },
+      { "quarter": 2, "year": 2021, "values": 7598870464.0 },
+      { "quarter": 3, "year": 2021, "values": 6121296789.0 },
+      { "quarter": 4, "year": 2021, "values": 34837968364.0 },
+      { "quarter": 1, "year": 2022, "values": 19524904986.0 },
+      { "quarter": 2, "year": 2022, "values": 7901082202.0 },
+      { "quarter": 3, "year": 2022, "values": 9511827082.0 },
+      { "quarter": 4, "year": 2022, "values": 13717265738.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "7. Chi phí môi giới chứng khoán",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 257259409976.0 },
+      { "quarter": 2, "year": 2021, "values": 369791692573.0 },
+      { "quarter": 3, "year": 2021, "values": 368583508722.0 },
+      { "quarter": 4, "year": 2021, "values": 498324307924.0 },
+      { "quarter": 1, "year": 2022, "values": 388117721392.0 },
+      { "quarter": 2, "year": 2022, "values": 332489541962.0 },
+      { "quarter": 3, "year": 2022, "values": 297046242341.0 },
+      { "quarter": 4, "year": 2022, "values": 318889497303.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "8. Chi phí hoạt động bảo lãnh, đại lý phát hành chứng khoán",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 9346150795.0 },
+      { "quarter": 2, "year": 2021, "values": 2080356891.0 },
+      { "quarter": 3, "year": 2021, "values": 1019460695.0 },
+      { "quarter": 4, "year": 2021, "values": 4761299902.0 },
+      { "quarter": 1, "year": 2022, "values": 4353479947.0 },
+      { "quarter": 2, "year": 2022, "values": 1962389497.0 },
+      { "quarter": 3, "year": 2022, "values": 3204975475.0 },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "9. Chi phí tư vấn",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 6313147478.0 },
+      { "quarter": 2, "year": 2021, "values": 13166319596.0 },
+      { "quarter": 3, "year": 2021, "values": 11863887657.0 },
+      { "quarter": 4, "year": 2021, "values": 16440468929.0 },
+      { "quarter": 1, "year": 2022, "values": 7337054413.0 },
+      { "quarter": 2, "year": 2022, "values": 12541891894.0 },
+      { "quarter": 3, "year": 2022, "values": 11947600436.0 },
+      { "quarter": 4, "year": 2022, "values": 38908758068.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "10. Chi phí hoạt động đấu giá, ủy thác",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 0.0 },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "11. Chi phí lưu ký chứng khoán",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 9411452600.0 },
+      { "quarter": 2, "year": 2021, "values": 9715822994.0 },
+      { "quarter": 3, "year": 2021, "values": 10337377795.0 },
+      { "quarter": 4, "year": 2021, "values": 12003795146.0 },
+      { "quarter": 1, "year": 2022, "values": 10209489039.0 },
+      { "quarter": 2, "year": 2022, "values": 10660717771.0 },
+      { "quarter": 3, "year": 2022, "values": 10822126657.0 },
+      { "quarter": 4, "year": 2022, "values": 12361554430.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "12. Chi phí khác",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 31549291250.0 },
+      { "quarter": 2, "year": 2021, "values": 37210395341.0 },
+      { "quarter": 3, "year": 2021, "values": 33843997534.0 },
+      { "quarter": 4, "year": 2021, "values": 96548255424.0 },
+      { "quarter": 1, "year": 2022, "values": 64379096211.0 },
+      { "quarter": 2, "year": 2022, "values": 54591813500.0 },
+      { "quarter": 3, "year": 2022, "values": 53872607956.0 },
+      { "quarter": 4, "year": 2022, "values": 60757955460.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Trong đó: Chi phí sửa lỗi giao dịch chứng khoán, lỗi khác",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Cộng chi phí hoạt động",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 695599943723.0 },
+      { "quarter": 2, "year": 2021, "values": 745571495689.0 },
+      { "quarter": 3, "year": 2021, "values": 643377055693.0 },
+      { "quarter": 4, "year": 2021, "values": 1070013957826.0 },
+      { "quarter": 1, "year": 2022, "values": 816287470106.0 },
+      { "quarter": 2, "year": 2022, "values": 695173647487.0 },
+      { "quarter": 3, "year": 2022, "values": 552575287729.0 },
+      { "quarter": 4, "year": 2022, "values": 640798997763.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "DOANH THU HOẠT ĐỘNG TÀI CHÍNH",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "1. Chênh lệch lãi tỷ giá hối đoái đã và chưa thực hiện",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 3016266176.0 },
+      { "quarter": 2, "year": 2021, "values": 5142498731.0 },
+      { "quarter": 3, "year": 2021, "values": 1202243773.0 },
+      { "quarter": 4, "year": 2021, "values": 1479915592.0 },
+      { "quarter": 1, "year": 2022, "values": 35462185879.0 },
+      { "quarter": 2, "year": 2022, "values": -9188585719.0 },
+      { "quarter": 3, "year": 2022, "values": 887365892.0 },
+      { "quarter": 4, "year": 2022, "values": 1126360415.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "2. Doanh thu, dự thu cổ tức, lãi tiền gửi không cố định phát sinh trong kỳ",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 4404041045.0 },
+      { "quarter": 2, "year": 2021, "values": 4435137974.0 },
+      { "quarter": 3, "year": 2021, "values": 4575033464.0 },
+      { "quarter": 4, "year": 2021, "values": 5540398591.0 },
+      { "quarter": 1, "year": 2022, "values": 5325350283.0 },
+      { "quarter": 2, "year": 2022, "values": 5013633940.0 },
+      { "quarter": 3, "year": 2022, "values": 4395439813.0 },
+      { "quarter": 4, "year": 2022, "values": 21120615356.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "3. Lãi bán, thanh lý các khoản đầu tư vào công ty con, liên kết, liên doanh",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": 241303599806.0 },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": 1377269827.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "4. Doanh thu khác về đầu tư",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 4554530322.0 },
+      { "quarter": 2, "year": 2021, "values": 9716344332.0 },
+      { "quarter": 3, "year": 2021, "values": 13731331023.0 },
+      { "quarter": 4, "year": 2021, "values": 44196102525.0 },
+      { "quarter": 1, "year": 2022, "values": 19658567749.0 },
+      { "quarter": 2, "year": 2022, "values": 2395553354.0 },
+      { "quarter": 3, "year": 2022, "values": 11045781799.0 },
+      { "quarter": 4, "year": 2022, "values": 82073455225.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Cộng doanh thu hoạt động tài chính",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 11974837543.0 },
+      { "quarter": 2, "year": 2021, "values": 19293981037.0 },
+      { "quarter": 3, "year": 2021, "values": 19508608260.0 },
+      { "quarter": 4, "year": 2021, "values": 292520016514.0 },
+      { "quarter": 1, "year": 2022, "values": 60446103911.0 },
+      { "quarter": 2, "year": 2022, "values": -1779398425.0 },
+      { "quarter": 3, "year": 2022, "values": 16328587504.0 },
+      { "quarter": 4, "year": 2022, "values": 105697700823.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "CHI PHÍ TÀI CHÍNH",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "1. Chênh lệch lỗ tỷ giá hối đoái đã và chưa thực hiện",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 13823379973.0 },
+      { "quarter": 2, "year": 2021, "values": 3218311377.0 },
+      { "quarter": 3, "year": 2021, "values": 15798386394.0 },
+      { "quarter": 4, "year": 2021, "values": 4841281497.0 },
+      { "quarter": 1, "year": 2022, "values": 27172233074.0 },
+      { "quarter": 2, "year": 2022, "values": 49437560991.0 },
+      { "quarter": 3, "year": 2022, "values": 57390293469.0 },
+      { "quarter": 4, "year": 2022, "values": -10018296474.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "2. Chi phí lãi vay",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 222007328495.0 },
+      { "quarter": 2, "year": 2021, "values": 229591683137.0 },
+      { "quarter": 3, "year": 2021, "values": 289281044668.0 },
+      { "quarter": 4, "year": 2021, "values": 288978429547.0 },
+      { "quarter": 1, "year": 2022, "values": 263887789515.0 },
+      { "quarter": 2, "year": 2022, "values": 278747346918.0 },
+      { "quarter": 3, "year": 2022, "values": 237401517228.0 },
+      { "quarter": 4, "year": 2022, "values": 250613291942.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "3. Lỗ bán, thanh lý các khoản đầu tư vào công ty con, liên kết, liên doanh",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": 0.0 },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "4. Chi phí đầu tư khác",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 7105820524.0 },
+      { "quarter": 2, "year": 2021, "values": 7507226301.0 },
+      { "quarter": 3, "year": 2021, "values": 13095698556.0 },
+      { "quarter": 4, "year": 2021, "values": 19347817882.0 },
+      { "quarter": 1, "year": 2022, "values": 10495224617.0 },
+      { "quarter": 2, "year": 2022, "values": 14249394207.0 },
+      { "quarter": 3, "year": 2022, "values": 27598544005.0 },
+      { "quarter": 4, "year": 2022, "values": 208660305746.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Cộng chi phí tài chính",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 242936528992.0 },
+      { "quarter": 2, "year": 2021, "values": 240317220815.0 },
+      { "quarter": 3, "year": 2021, "values": 318175129618.0 },
+      { "quarter": 4, "year": 2021, "values": 313167528926.0 },
+      { "quarter": 1, "year": 2022, "values": 301555247206.0 },
+      { "quarter": 2, "year": 2022, "values": 342434302116.0 },
+      { "quarter": 3, "year": 2022, "values": 322390354702.0 },
+      { "quarter": 4, "year": 2022, "values": 449255301214.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "CHI BÁN HÀNG",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "CHI PHÍ QUẢN LÝ CÔNG TY CHỨNG KHOÁN",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 49827368285.0 },
+      { "quarter": 2, "year": 2021, "values": 67089627260.0 },
+      { "quarter": 3, "year": 2021, "values": 69474732156.0 },
+      { "quarter": 4, "year": 2021, "values": 78617936184.0 },
+      { "quarter": 1, "year": 2022, "values": 67175440697.0 },
+      { "quarter": 2, "year": 2022, "values": 69115043816.0 },
+      { "quarter": 3, "year": 2022, "values": 74564453871.0 },
+      { "quarter": 4, "year": 2022, "values": 85534481941.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "KẾT QUẢ HOẠT ĐỘNG",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 529190678608.0 },
+      { "quarter": 2, "year": 2021, "values": 732505552990.0 },
+      { "quarter": 3, "year": 2021, "values": 736569144676.0 },
+      { "quarter": 4, "year": 2021, "values": 1254045453426.0 },
+      { "quarter": 1, "year": 2022, "values": 882987714798.0 },
+      { "quarter": 2, "year": 2022, "values": 520583529510.0 },
+      { "quarter": 3, "year": 2022, "values": 414765316260.0 },
+      { "quarter": 4, "year": 2022, "values": 281319462557.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "THU NHẬP KHÁC VÀ CHI PHÍ KHÁC",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "1. Thu nhập khác",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 877126421.0 },
+      { "quarter": 2, "year": 2021, "values": 972927581.0 },
+      { "quarter": 3, "year": 2021, "values": 111849278272.0 },
+      { "quarter": 4, "year": 2021, "values": 402009528.0 },
+      { "quarter": 1, "year": 2022, "values": 426812071.0 },
+      { "quarter": 2, "year": 2022, "values": 1985544037.0 },
+      { "quarter": 3, "year": 2022, "values": 695386731.0 },
+      { "quarter": 4, "year": 2022, "values": 8148059379.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "2. Chi phí khác",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 570.0 },
+      { "quarter": 2, "year": 2021, "values": 498731.0 },
+      { "quarter": 3, "year": 2021, "values": 4300015.0 },
+      { "quarter": 4, "year": 2021, "values": 1368531017.0 },
+      { "quarter": 1, "year": 2022, "values": 126922194.0 },
+      { "quarter": 2, "year": 2022, "values": 54472359.0 },
+      { "quarter": 3, "year": 2022, "values": 199633792.0 },
+      { "quarter": 4, "year": 2022, "values": 827405221.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Cộng kết quả hoạt động khác",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 877125851.0 },
+      { "quarter": 2, "year": 2021, "values": 972428850.0 },
+      { "quarter": 3, "year": 2021, "values": 111844978257.0 },
+      { "quarter": 4, "year": 2021, "values": -966521489.0 },
+      { "quarter": 1, "year": 2022, "values": 299889877.0 },
+      { "quarter": 2, "year": 2022, "values": 1931071678.0 },
+      { "quarter": 3, "year": 2022, "values": 495752939.0 },
+      { "quarter": 4, "year": 2022, "values": 7320654158.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "TỔNG LỢI NHUẬN KẾ TOÁN TRƯỚC THUẾ",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 530067804459.0 },
+      { "quarter": 2, "year": 2021, "values": 733477981840.0 },
+      { "quarter": 3, "year": 2021, "values": 848414122933.0 },
+      { "quarter": 4, "year": 2021, "values": 1253078931937.0 },
+      { "quarter": 1, "year": 2022, "values": 883287604675.0 },
+      { "quarter": 2, "year": 2022, "values": 522514601188.0 },
+      { "quarter": 3, "year": 2022, "values": 415261069199.0 },
+      { "quarter": 4, "year": 2022, "values": 288640116715.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "1. Lợi nhuận đã thực hiện",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 570904331385.0 },
+      { "quarter": 2, "year": 2021, "values": 717447582666.0 },
+      { "quarter": 3, "year": 2021, "values": 854777724986.0 },
+      { "quarter": 4, "year": 2021, "values": 1089041724812.0 },
+      { "quarter": 1, "year": 2022, "values": 992646125128.0 },
+      { "quarter": 2, "year": 2022, "values": 617794045135.0 },
+      { "quarter": 3, "year": 2022, "values": 517031541141.0 },
+      { "quarter": 4, "year": 2022, "values": 281151417149.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "2. Lợi nhuận chưa thực hiện",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": -40836526926.0 },
+      { "quarter": 2, "year": 2021, "values": 16030399174.0 },
+      { "quarter": 3, "year": 2021, "values": -6363602053.0 },
+      { "quarter": 4, "year": 2021, "values": 164037207125.0 },
+      { "quarter": 1, "year": 2022, "values": -109358520453.0 },
+      { "quarter": 2, "year": 2022, "values": -95279443947.0 },
+      { "quarter": 3, "year": 2022, "values": -101770471942.0 },
+      { "quarter": 4, "year": 2022, "values": 7488699566.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "CHI PHÍ THUẾ TNDN",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 106329041095.0 },
+      { "quarter": 2, "year": 2021, "values": 142670470138.0 },
+      { "quarter": 3, "year": 2021, "values": 165842500015.0 },
+      { "quarter": 4, "year": 2021, "values": 255129131901.0 },
+      { "quarter": 1, "year": 2022, "values": 177032938956.0 },
+      { "quarter": 2, "year": 2022, "values": 101339975627.0 },
+      { "quarter": 3, "year": 2022, "values": 78920752976.0 },
+      { "quarter": 4, "year": 2022, "values": 54716555419.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "1. Chi phí thuế TNDN hiện hành",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 107999511414.0 },
+      { "quarter": 2, "year": 2021, "values": 156946200028.0 },
+      { "quarter": 3, "year": 2021, "values": 158807619066.0 },
+      { "quarter": 4, "year": 2021, "values": 226914700497.0 },
+      { "quarter": 1, "year": 2022, "values": 218208618444.0 },
+      { "quarter": 2, "year": 2022, "values": 108460245439.0 },
+      { "quarter": 3, "year": 2022, "values": 92938592641.0 },
+      { "quarter": 4, "year": 2022, "values": 39311766584.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "2. Chi phí thuế TNDN hoãn lại",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": -1670470319.0 },
+      { "quarter": 2, "year": 2021, "values": -14275729890.0 },
+      { "quarter": 3, "year": 2021, "values": 7034880949.0 },
+      { "quarter": 4, "year": 2021, "values": 28214431404.0 },
+      { "quarter": 1, "year": 2022, "values": -41175679488.0 },
+      { "quarter": 2, "year": 2022, "values": -7120269812.0 },
+      { "quarter": 3, "year": 2022, "values": -14017839665.0 },
+      { "quarter": 4, "year": 2022, "values": 15404788835.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "LỢI NHUẬN KẾ TOÁN SAU THUẾ TNDN",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 423738763364.0 },
+      { "quarter": 2, "year": 2021, "values": 590807511702.0 },
+      { "quarter": 3, "year": 2021, "values": 682571622918.0 },
+      { "quarter": 4, "year": 2021, "values": 997949800036.0 },
+      { "quarter": 1, "year": 2022, "values": 706254665719.0 },
+      { "quarter": 2, "year": 2022, "values": 421174625561.0 },
+      { "quarter": 3, "year": 2022, "values": 336340316223.0 },
+      { "quarter": 4, "year": 2022, "values": 233923561296.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "1. Lợi nhuận sau thuế phân bổ cho chủ sở hữu",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 424126623892.0 },
+      { "quarter": 2, "year": 2021, "values": 591169332288.0 },
+      { "quarter": 3, "year": 2021, "values": 683074380090.0 },
+      { "quarter": 4, "year": 2021, "values": 997543604981.0 },
+      { "quarter": 1, "year": 2022, "values": 706535902142.0 },
+      { "quarter": 2, "year": 2022, "values": 422105757033.0 },
+      { "quarter": 3, "year": 2022, "values": 336424998451.0 },
+      { "quarter": 4, "year": 2022, "values": 234253238597.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "2. Lợi nhuận sau thuế trích các Quỹ dự trữ điều lệ, Quỹ Dự phòng tài chính và rủi ro nghề nghiệp theo quy định của Điều lệ Công ty là %)",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": 71070716933.0 },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": -281236423.0 },
+      { "quarter": 2, "year": 2022, "values": 79286152565.0 },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "3. Lợi nhuận thuần phân bổ cho lợi ích của cổ đông không kiểm soát",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": -387860528.0 },
+      { "quarter": 2, "year": 2021, "values": -361820586.0 },
+      { "quarter": 3, "year": 2021, "values": -502757172.0 },
+      { "quarter": 4, "year": 2021, "values": 406195055.0 },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": -1212367895.0 },
+      { "quarter": 3, "year": 2022, "values": -84682228.0 },
+      { "quarter": 4, "year": 2022, "values": -329677301.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "THU NHẬP (LỖ) TOÀN DIỆN KHÁC SAU THUẾ TNDN",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 929243500.0 },
+      { "quarter": 2, "year": 2021, "values": 929243500.0 },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": -2493352734.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "1. Lãi/(Lỗ) từ đánh giá lại các các khoản đầu tư giữ đến ngày đáo hạn",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": 929243500.0 },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": -2493352734.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "2.Lãi/(Lỗ) từ đánh giá lại các tài sản tài chính sẵn sàng để bán",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 929243500.0 },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "3. Lãi (lỗ) toàn diện khác được chia từ hoạt động đầu tư vào công ty con, công ty liên kết, liên doanh",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "4. Lãi/(Lỗ) từ đánh giá lại các công cụ tài chính phái sinh",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "5. Lãi/(lỗ) chênh lệch tỷ giá của hoạt động tại nước ngoài",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "6. Lãi, lỗ từ các khoản đầu tư vào công ty con, công ty liên kết, liên doanh chưa chia",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "7. Lãi, lỗ đánh giá công cụ phái sinh",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "8. Lãi, lỗ đánh giá lại tài sản cố định theo mô hình giá trị hợp lý",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Tổng thu nhập toàn diện",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 929243500.0 },
+      { "quarter": 2, "year": 2021, "values": 929243500.0 },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": -2493352734.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Thu nhập toàn diện phân bổ cho chủ sở hữu",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": 929243500.0 },
+      { "quarter": 2, "year": 2021, "values": 929243500.0 },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": -2493352734.0 }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "Thu nhập toàn diện phân bổ cho cổ đông không nắm quyền kiểm soát",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "THU NHẬP THUẦN TRÊN CỔ PHIẾU PHỔ THÔNG",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "1. Lãi cơ bản trên cổ phiếu (Đồng/1 cổ phiếu)",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  },
+  {
+    "tickersymbol": "SSI",
+    "name": "2. Thu nhập pha loãng trên cổ phiếu (Đồng/1 cổ phiếu)",
+    "values": [
+      { "quarter": 1, "year": 2021, "values": null },
+      { "quarter": 2, "year": 2021, "values": null },
+      { "quarter": 3, "year": 2021, "values": null },
+      { "quarter": 4, "year": 2021, "values": null },
+      { "quarter": 1, "year": 2022, "values": null },
+      { "quarter": 2, "year": 2022, "values": null },
+      { "quarter": 3, "year": 2022, "values": null },
+      { "quarter": 4, "year": 2022, "values": null }
+    ]
+  }
+]
