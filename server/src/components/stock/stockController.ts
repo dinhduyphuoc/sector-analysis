@@ -1,5 +1,6 @@
 import catchAsync from "../../utils/catchAsync";
 import getDBConnectionPool from "../../models/db";
+import logger from "../../utils/logger";
 
 export const getStockInsightData = catchAsync(async (req, res) => {
   const pool = getDBConnectionPool();
@@ -30,12 +31,22 @@ export const getStockClosePrices = catchAsync(async (req, res) => {
 });
 
 export const getStocks = catchAsync(async (req, res) => {
+  const { sectorid } = req.query;
   const pool = getDBConnectionPool();
-  const query = "SELECT * FROM sector_ticker";
 
-  const queryResult = await pool.query(query);
+  let query = "SELECT * FROM sector_ticker ";
 
-  res.json(queryResult.rows);
+  if (req.query.sectorid) {
+    query += `WHERE sectorid = ${sectorid}`;
+  }
+  try {
+    const { rows } = await pool.query(query);
+    res.json(rows);
+  } catch (e: any) {
+    res.json({
+      message: e.message,
+    });
+  }
 });
 
 export const getStockInfo = catchAsync(async (req, res) => {

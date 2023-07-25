@@ -8,7 +8,9 @@ async function start() {
 
 start()
   .then((startResponses) => {
-    logger.info(`The app has started successfully ${startResponses}}`);
+    logger.info(
+      `The app has started successfully. ${startResponses.length} components started.`
+    );
   })
   .catch((error) => {
     errorHandler.handleError(

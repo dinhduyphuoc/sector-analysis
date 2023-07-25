@@ -51,30 +51,21 @@ export const getSectorFundamentalData = catchAsync(async (req, res) => {
 });
 
 export const getSectorScore = catchAsync(async (req, res) => {
+  const { sectorid, year } = req.query;
   const pool = getDBConnectionPool();
 
-  const ticker = req.params.ticker;
-
-  const query = `WITH latest_quarters AS (
-    SELECT year
-    FROM f_score
-    WHERE year = EXTRACT(YEAR FROM CURRENT_DATE) 
-    OR year = EXTRACT(YEAR FROM CURRENT_DATE) - 1
-    GROUP BY year
-    ORDER BY year DESC
-    LIMIT 1
-),
-combined_quarters AS (
+  const query = `
     SELECT *
     FROM f_score
-    WHERE (year, quarter) IN (SELECT year, quarter FROM latest_quarters)
-    AND tickersymbol = '${ticker}'
-)
-SELECT *
-FROM combined_quarters
-WHERE tickersymbol = '${ticker}'`;
+    WHERE year = ${year}
+    AND sectorid = ${sectorid}
+    AND tickersymbol IN (SELECT tickersymbol FROM sector_ticker_top_10)`;
 
-  const queryResult = await pool.query(query);
+  try {
+    const { rows } = await pool.query(query);
 
-  res.json(queryResult.rows[0]);
+    res.json(rows);
+  } catch (err: any) {
+    res.json({ message: err.message });
+  }
 });
