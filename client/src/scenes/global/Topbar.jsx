@@ -7,57 +7,18 @@ import { getStocksList } from "../../services/services";
 
 const items = [
   {
-    name: "Fundamental",
+    name: "Tổng quan ngành",
     path: "/fundamental",
   },
   {
-    name: "Sector Analysis",
-    path: "/sector-analysis",
-  },
-  {
-    name: "Prediction",
-    path: "/predict",
+    name: "Phân tích ngành",
+    path: "/analysis",
   },
 ];
 
 const Topbar = () => {
-  const [tickers, setTickers] = useState([]);
   const location = useLocation();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    (async () => {
-      const tickers = await getStocksList();
-      const mapped = tickers.map((stock) => ({
-        name: stock.tickersymbol,
-        sectorid: stock.sectorid,
-      }));
-
-      setTickers(mapped);
-    })();
-  }, []);
-
-  const handleOnChange = (e, newValue) => {
-    if (newValue) {
-      e.preventDefault();
-      navigate(`/sector-analysis/${newValue.name}`);
-    }
-  };
-
-  const handleOnKeyDown = (e) => {
-    if (
-      e.key === "Enter" &&
-      e.target.value &&
-      tickers.find((ticker) => ticker.name === e.target.value)
-    ) {
-      e.preventDefault();
-      navigate(`/sector-analysis/${e.target.value}`);
-    }
-  };
-
-  const handleInput = (e) => {
-    e.target.value = e.target.value.toUpperCase();
-  };
 
   return (
     <Box

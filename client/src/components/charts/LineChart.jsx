@@ -6,18 +6,13 @@ import stock from "highcharts/modules/stock";
 import HighchartsReact from "highcharts-react-official";
 import SelectSmall from "../select/SelectSmall";
 import GridLoader from "react-spinners/GridLoader";
-import {
-  ratioList,
-  ratioOptionsLabel,
-  ratioOptionsAPI,
-  sectorsList,
-} from "../../constants/constants";
+import { ratioList, ratioOptionsAPI, sectorsList } from "../../common/common";
 import MultiSelect from "../select/MultiSelect";
 import {
   getDailyChartFundamentalData,
   getStocksList,
 } from "../../services/services";
-import { convertISO8601ToMilliseconds, roundNum } from "../../utils/utils";
+import { roundNum } from "../../utils/utils";
 import { useLoadingUpdate } from "../../contexts/loadingContext";
 
 stock(Highcharts);
@@ -90,7 +85,7 @@ const LineChart = ({ sector, isSector }) => {
         };
       });
 
-      const tickers = await getStocksList();
+      const tickers = await getStocksList(sector.id);
 
       setTickers(tickers);
       setSectorData(curSectorChartData);
@@ -116,7 +111,7 @@ const LineChart = ({ sector, isSector }) => {
   }, [sectorData]);
 
   useEffect(() => {
-    if (sectorData) {
+    if (sectorData && tickerData) {
       const tmp = sectorData;
       setChartOptions({
         ...chartOptions,
@@ -124,7 +119,7 @@ const LineChart = ({ sector, isSector }) => {
       });
       setLoading(false);
     }
-  }, [tickerData]);
+  }, [tickerData, sectorData]);
 
   const formatQuarterlyData = (data) => {
     const formattedData = data.map((point) => {
@@ -288,17 +283,20 @@ const LineChart = ({ sector, isSector }) => {
                 <SelectSmall
                   options={ratioList}
                   option={ratio}
+                  label={"Chỉ số"}
                   onChange={handleSelectionChange}
                 />
                 {renderMultiSelect()}
               </Stack>
             </Box>
           </Box>
-          <HighchartsReact
-            constructorType="stockChart"
-            highcharts={Highcharts}
-            options={chartOptions}
-          />
+          {chartOptions ? (
+            <HighchartsReact
+              constructorType="stockChart"
+              highcharts={Highcharts}
+              options={chartOptions}
+            />
+          ) : null}
         </>
       )}
     </Box>

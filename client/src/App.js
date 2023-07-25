@@ -7,8 +7,8 @@ import Topbar from "./scenes/global/Topbar";
 import SectorsFundamental from "./scenes/SectorsFundamental";
 import { useLoading, useLoadingUpdate } from "./contexts/loadingContext";
 import SectorProvider from "./contexts/sectorContext";
-import SectorAnalysis from "./scenes/SectorAnalysis";
 import LoadingBar from "react-top-loading-bar";
+import SectorsAnalysis from "./scenes/SectorsAnalysis";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -33,11 +33,7 @@ function App() {
                 element={<Navigate replace to="/fundamental" />}
               />
               <Route path="/fundamental" element={<SectorsFundamental />} />
-              <Route
-                path="/sector-analysis/"
-                element={<Navigate replace to="/sector-analysis/NVL" />}
-              />
-              <Route path="/sector-analysis/:id" element={<SectorAnalysis />} />
+              <Route path="/analysis" element={<SectorsAnalysis />} />
             </Routes>
           </Container>
         </SectorProvider>

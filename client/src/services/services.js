@@ -1,10 +1,12 @@
-import { sectorsList } from "../constants/constants";
+import { sectorsList } from "../common/common";
 import http from "../utils/httpUtils";
 
 const host = "http://localhost:8000/v1";
 
-export const getStocksList = async () => {
-  const { data } = await http.get(`${host}/stock/list`);
+export const getStocksList = async (sectorid) => {
+  let url = `${host}/stock/list`;
+  if (sectorid) url += `?sectorid=${sectorid}`;
+  const { data } = await http.get(url);
   return data;
 };
 
@@ -51,7 +53,8 @@ export const getSectorScore = async (sectorId) => {
   return data;
 };
 
-const isDailyData = (ratio) => {
-  if (["pe", "pb"].includes(ratio)) return true;
-  return false;
+export const getFScore = async (sectorid, year = 2022) => {
+  const url = `${host}/sector/f-score?sectorid=${sectorid}&year=${year}`;
+  const { data } = await http.get(url);
+  return data;
 };

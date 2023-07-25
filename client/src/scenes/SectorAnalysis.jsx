@@ -52,7 +52,7 @@ const SectorAnalysis = ({ updateProgress }) => {
 
         const [stockScorings] = await Promise.all([
           getStockScore(id),
-          // getSectorScore(tickerInfo.sectorid),
+          getSectorScore(tickerInfo.sectorid),
         ]);
 
         const stockAverage = extractAverage(stockScorings);
@@ -148,7 +148,6 @@ const SectorAnalysis = ({ updateProgress }) => {
           <Box display="flex" gap="20px">
             <img
               style={{
-                // make image fit the box above
                 width: "85px",
                 height: "85px",
                 objectFit: "contain",
