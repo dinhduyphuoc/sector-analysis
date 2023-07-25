@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:16-alpine
 
 # Create app directory
 WORKDIR /server
@@ -9,6 +9,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 8000
 
 CMD ["npm", "run", "serve"]

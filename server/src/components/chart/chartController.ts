@@ -93,30 +93,33 @@ const getDailyFundamentalChartData = catchAsync(async (req, res) => {
                     year, quarter`;
   }
 
-  const queryResult: any = await pool.query(query);
-
-  if (interval === "daily") {
-    return res.json({
-      id: queryResult.rows[0][typeMap],
-      interval: interval,
-      data: queryResult.rows.map((row: any) => {
-        // @ts-ignore
-        return [
-          convertISO8601ToMilliseconds(row.datetime),
+  try {
+    const { rows }: any = await pool.query(query);
+    if (interval === "daily") {
+      return res.json({
+        id: rows[0][typeMap],
+        interval: interval,
+        data: rows.map((row: any) => {
           // @ts-ignore
-          roundNum(row[ratio]),
-        ];
+          return [
+            convertISO8601ToMilliseconds(row.datetime),
+            // @ts-ignore
+            roundNum(row[ratio]),
+          ];
+        }),
+      });
+    }
+    return res.json({
+      id: rows[0][typeMap],
+      interval: interval,
+      data: rows.map((row: any) => {
+        // @ts-ignore
+        return [row.year, row.quarter, row[ratio]];
       }),
     });
+  } catch (e) {
+    res.json(e);
   }
-  return res.json({
-    id: queryResult.rows[0][typeMap],
-    interval: interval,
-    data: queryResult.rows.map((row: any) => {
-      // @ts-ignore
-      return [row.year, row.quarter, row[ratio]];
-    }),
-  });
 });
 
 const getQuarterlyFundamentalChartData = catchAsync(async (req, res) => {
