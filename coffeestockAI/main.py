@@ -19,9 +19,15 @@ port= '25060'
 
 cursor_obj = con.cursor()
 
+
+
 #Lấy khoảng thời gian cần predict và cổ phiếu muốn coi của người dùng
 predict_range = 45
 ticker = 'ACV'
+
+
+
+
 
 # get actual price from database 
 cursor_obj.execute(f"SELECT datetime, price FROM close_price_top_10 where tickersymbol = '{ticker}'")
@@ -75,7 +81,7 @@ def actual_and_test(df, ticker, predict_range):
     train_predict=scaler.inverse_transform(train_predict)
     test_predict=scaler.inverse_transform(test_predict)
 
-    # plot baseline and predictions
+    # # plot baseline and predictions
     # plt.figure(figsize=(8, 5))
     # plt.title("Stock Price Prediction using LSTM")
     # plt.xlabel("Time")
@@ -88,59 +94,63 @@ def actual_and_test(df, ticker, predict_range):
 
     # plt.show()
 
-    x_input=test_data[test_data.shape[0]-150:].reshape(1,-1)
-    temp_input=list(x_input)
-    temp_input=temp_input[0].tolist()  
+    # x_input=test_data[test_data.shape[0]-150:].reshape(1,-1)
+    # temp_input=list(x_input)
+    # temp_input=temp_input[0].tolist()  
 
 
-    lst_output=[]
-    n_steps=150
-    i=0
-    while(i<predict_range):
-        if(len(temp_input)>150):
-            #print(temp_input)
-            x_input=np.array(temp_input[1:])
-            # print("{} day input {}".format(i,x_input))
-            x_input=x_input.reshape(1,-1)
-            x_input = x_input.reshape((1, n_steps, 1))
-            #print(x_input)
-            yhat = model.predict(x_input, verbose=0)
-            # print("{} day output {}".format(i,yhat))
-            temp_input.extend(yhat[0].tolist())
-            temp_input=temp_input[1:]
-            #print(temp_input)
-            lst_output.extend(yhat.tolist())
-            i=i+1
-        else:
-            x_input = x_input.reshape((1, n_steps,1))
-            yhat = model.predict(x_input, verbose=0)
-            # print(yhat[0])
-            temp_input.extend(yhat[0].tolist())
-            # print(len(temp_input))
-            lst_output.extend(yhat.tolist())
-            i=i+1
+    # lst_output=[]
+    # n_steps=150
+    # i=0
+    # while(i<predict_range):
+    #     if(len(temp_input)>150):
+    #         #print(temp_input)
+    #         x_input=np.array(temp_input[1:])
+    #         # print("{} day input {}".format(i,x_input))
+    #         x_input=x_input.reshape(1,-1)
+    #         x_input = x_input.reshape((1, n_steps, 1))
+    #         #print(x_input)
+    #         yhat = model.predict(x_input, verbose=0)
+    #         # print("{} day output {}".format(i,yhat))
+    #         temp_input.extend(yhat[0].tolist())
+    #         temp_input=temp_input[1:]
+    #         #print(temp_input)
+    #         lst_output.extend(yhat.tolist())
+    #         i=i+1
+    #     else:
+    #         x_input = x_input.reshape((1, n_steps,1))
+    #         yhat = model.predict(x_input, verbose=0)
+    #         # print(yhat[0])
+    #         temp_input.extend(yhat[0].tolist())
+    #         # print(len(temp_input))
+    #         lst_output.extend(yhat.tolist())
+    #         i=i+1
     
-    day_new=np.arange(1,151)
-    day_pred=np.arange(151,151+predict_range)
+    # day_new=np.arange(1,151)
+    # day_pred=np.arange(151,151+predict_range)
 
-    # plot baseline and predictions
-    plt.figure(figsize=(8, 5))
-    plt.title("Stock Price Prediction using LSTM")
-    plt.xlabel("Time")
-    plt.ylabel("Stock Price")
+    # # plot baseline and predictions
+    # plt.figure(figsize=(8, 5))
+    # plt.title("Stock Price Prediction using LSTM")
+    # plt.xlabel("Time")
+    # plt.ylabel("Stock Price")
 
-    plt.plot(scaler.inverse_transform(df_1[df_1.shape[0]-150:]), label="Actual Stock Prices")
-    plt.plot(day_pred,scaler.inverse_transform(lst_output), label="Next 45 days prediction", linestyle='dashed')
+    # plt.plot(scaler.inverse_transform(df_1[df_1.shape[0]-150:]), label="Actual Stock Prices")
+    # plt.plot(day_pred,scaler.inverse_transform(lst_output), label="Next 45 days prediction", linestyle='dashed')
 
-    # Add legend
-    plt.legend()
+    # # Add legend
+    # plt.legend()
 
-    plt.show()
+    # plt.show()
 
-    # return [scaler.inverse_transform(df_1[df_1.shape[0]-test_predict.shape[0]+200:]), test_predict[200:]]
+    return [scaler.inverse_transform(df_1[df_1.shape[0]-test_predict.shape[0]+200:]), test_predict[200:]]
+
+actual_vs_test = actual_and_test(df, ticker, predict_range)
 
 
-actual_and_test(df, ticker, predict_range)
+plt.plot(actual_vs_test[1])
+plt.show()
+
 
 
 

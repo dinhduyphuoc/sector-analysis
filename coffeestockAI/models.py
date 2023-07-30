@@ -65,7 +65,7 @@ def build_model(df, ticker):
     model.add(Dense(1))
     model.compile(loss='mean_squared_error',optimizer='adam')
 
-    model.fit(X_train,y_train,validation_data=(X_test,ytest),epochs=200,batch_size=64,verbose=1)
+    model.fit(X_train,y_train,validation_data=(X_test,ytest),epochs=50,batch_size=64,verbose=1)
 
     model.save(f"./pre_trained_models/{ticker}.h5")
 
@@ -95,7 +95,7 @@ cursor_obj.execute("SELECT DISTINCT tickersymbol FROM close_price_top_10")
 all_tickers = [i[0] for i in cursor_obj.fetchall()]
 
 # build all models
-for ticker in ['ACV']:
+for ticker in all_tickers:
     cursor_obj.execute(f"SELECT datetime, price FROM close_price_top_10 WHERE tickersymbol = '{ticker}'")
     result = cursor_obj.fetchall()
 
