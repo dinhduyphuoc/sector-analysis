@@ -1,7 +1,8 @@
 import { sectorsList } from "../common/common";
 import http from "../utils/httpUtils";
 
-const host = process.env.REACT_APP_HOST;
+const host = "http://localhost:8000/v1";
+const host2 = "http://127.0.0.1:5001/api";
 
 export const getStocksList = async (sectorid) => {
   let url = `${host}/stock/list`;
