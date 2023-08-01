@@ -34,13 +34,16 @@ export const getStocks = catchAsync(async (req, res) => {
   const { sectorid } = req.query;
   const pool = getDBConnectionPool();
 
-  let query = "SELECT * FROM sector_ticker ";
+  let query = "SELECT * FROM sector_ticker";
 
+  const values = [];
   if (req.query.sectorid) {
-    query += `WHERE sectorid = ${sectorid}`;
+    query += " WHERE sectorid = $1";
+    values.push(sectorid);
   }
+
   try {
-    const { rows } = await pool.query(query);
+    const { rows } = await pool.query(query, values);
     res.json(rows);
   } catch (e: any) {
     res.json({
@@ -94,8 +97,4 @@ WHERE tickersymbol = '${ticker}'`;
   const queryResult = await pool.query(query);
 
   res.json(queryResult.rows[0]);
-});
-
-export const getStockAnalysis = catchAsync(async (req, res) => {
-  const ticker = req.params.ticker;
 });

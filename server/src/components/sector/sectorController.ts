@@ -57,13 +57,14 @@ export const getSectorScore = catchAsync(async (req, res) => {
   const query = `
     SELECT *
     FROM f_score
-    WHERE year = ${year}
-    AND sectorid = ${sectorid}
+    WHERE year = $1
+    AND sectorid = $2
     AND tickersymbol IN (SELECT tickersymbol FROM sector_ticker_top_10)`;
 
-  try {
-    const { rows } = await pool.query(query);
+  const values = [year, sectorid];
 
+  try {
+    const { rows } = await pool.query(query, values);
     res.json(rows);
   } catch (err: any) {
     res.json({ message: err.message });
