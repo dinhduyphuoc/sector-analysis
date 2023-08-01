@@ -1,30 +1,40 @@
 import React, { useEffect, useState } from "react";
 import PredictionLineChart from "../components/charts/PredictionLineChart";
-import { getStockPrediction } from "../services/services";
-import { useParams } from "react-router-dom";
+import { getStockPrediction, getStocksList } from "../services/services";
+import { useNavigate, useParams } from "react-router-dom";
 import { Box, Stack, TextField, Typography, useTheme } from "@mui/material";
 import GridLoader from "react-spinners/GridLoader";
 import Header from "../components/Header";
 import { tokens } from "../theme";
+import SelectSmall from "../components/select/SelectSmall";
 
 const StockPrediction = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const { tickersymbol } = useParams();
+  const [tickers, setTickers] = useState();
   const [predictData, setPredictData] = useState();
   const [loading, setLoading] = useState(true);
   const [defaultRange, setDefaultRange] = useState(100);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       const response = await getStockPrediction(tickersymbol, defaultRange);
 
+      let tickers = await getStocksList();
+      tickers = tickers.map((ticker) => ({
+        label: ticker.tickersymbol,
+        value: ticker.tickersymbol,
+      }));
+
+      setTickers(tickers);
       setPredictData(response);
       setLoading(false);
     };
     fetchData();
-  }, [defaultRange]);
+  }, [defaultRange, tickersymbol]);
 
   const renderForm = () => {
     return (
@@ -52,6 +62,10 @@ const StockPrediction = () => {
     );
   };
 
+  const handleOnChange = (e) => {
+    navigate(`/prediction/${e.target.value}`);
+  };
+
   return (
     <Box
       display="flex"
@@ -73,7 +87,6 @@ const StockPrediction = () => {
           margin: "0 150px 20px",
           fontSize: "1rem",
           display: "inline-block",
-          textAlign: "center",
         }}
       >
         Mô hình được chúng tôi xây dựng và huấn luyện dựa trên giá lịch sử của
@@ -83,6 +96,25 @@ const StockPrediction = () => {
         dụng đầu tư thực tế. Hãy cân nhắc trước khi ra bất kỳ quyết định đầu tư
         nào.
       </Typography>
+      <Box>
+        <Typography
+          sx={{
+            fontSize: "2rem",
+            fontWeight: 700,
+            display: "inline-block",
+          }}
+        >
+          Cổ phiếu dự đoán:&nbsp;
+        </Typography>
+        {tickers ? (
+          <SelectSmall
+            options={tickers}
+            option={tickersymbol}
+            label={"Cổ phiếu"}
+            onChange={handleOnChange}
+          />
+        ) : null}
+      </Box>
       {loading ? (
         <Box
           style={{

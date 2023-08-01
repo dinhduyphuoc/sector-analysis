@@ -6,7 +6,10 @@ import Select from "@mui/material/Select";
 
 export default function SelectSmall({ onChange, option, options, label }) {
   return (
-    <FormControl sx={{ margin: "0 5px", minWidth: 120 }} size="medium">
+    <FormControl
+      sx={{ margin: "0 5px", minWidth: 120, display: "inline-block" }}
+      size="medium"
+    >
       <InputLabel id="demo-select-small-label">Chỉ số</InputLabel>
       <Select
         labelId="demo-select-small-label"
