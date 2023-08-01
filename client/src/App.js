@@ -9,6 +9,8 @@ import { useLoading, useLoadingUpdate } from "./contexts/loadingContext";
 import SectorProvider from "./contexts/sectorContext";
 import LoadingBar from "react-top-loading-bar";
 import SectorsAnalysis from "./scenes/SectorsAnalysis";
+import { Helmet } from "react-helmet";
+import StockPrediction from "./scenes/StockPrediction";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -34,6 +36,8 @@ function App() {
               />
               <Route path="/fundamental" element={<SectorsFundamental />} />
               <Route path="/analysis" element={<SectorsAnalysis />} />
+              <Route path="/prediction" element={<Navigate replace to="/prediction/ACV" />} />
+              <Route path="/prediction/:tickersymbol" element={<StockPrediction />} />
             </Routes>
           </Container>
         </SectorProvider>

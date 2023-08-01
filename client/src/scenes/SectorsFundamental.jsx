@@ -3,9 +3,13 @@ import { Box } from "@mui/system";
 import LineChart from "../components/charts/LineChart";
 import Header from "../components/Header";
 import { getSectorsList } from "../services/services";
+import { useTheme } from "@emotion/react";
+import { tokens } from "../theme";
 
 const SectorsFundamental = () => {
   const [sectors] = useState(getSectorsList());
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
 
   useEffect(() => {
     document.title = "CoffeeStock - Tổng Quan Thị Trường";
@@ -22,7 +26,7 @@ const SectorsFundamental = () => {
         title="Toàn Cảnh Thị Trường Việt Nam: Các Nhóm Ngành"
         subtitle="Chỉ số tham chiếu: VNINDEX. Dữ liệu lần cuối cập nhật: 03/2023"
         sx={{
-          backgroundColor: "#20232E",
+          backgroundColor: colors.primary[400],
           padding: "10px 20px",
           textAlign: "center",
         }}
@@ -31,7 +35,7 @@ const SectorsFundamental = () => {
         <Box
           key={sector.id}
           sx={{
-            bgcolor: "#20232E",
+            bgcolor: colors.primary[400],
             margin: "20px 0",
             height: "500px",
           }}
@@ -41,7 +45,7 @@ const SectorsFundamental = () => {
       ))}
       <Box
         sx={{
-          bgcolor: "#20232E",
+          bgcolor: colors.primary[400],
           height: "100%",
         }}
       >
@@ -49,16 +53,11 @@ const SectorsFundamental = () => {
       </Box>
       <Box
         sx={{
-          bgcolor: "#20232E",
+          bgcolor: colors.primary[400],
           marginTop: "12px",
           height: "100%",
         }}
       >
-        {/* <EnhancedTable
-          sectors={sectors}
-          sectorsState={sectorsState}
-          onSectorOptionChange={handleSectorChangeOption}
-        /> */}
       </Box>
     </Box>
   );

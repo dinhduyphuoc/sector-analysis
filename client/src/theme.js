@@ -5,6 +5,7 @@ import { createTheme } from "@mui/material/styles";
 export const tokens = (mode) => ({
   ...(mode === "dark"
     ? {
+        text: "#ffffff",
         grey: {
           100: "#e0e0e0",
           200: "#c2c2c2",
@@ -73,6 +74,7 @@ export const tokens = (mode) => ({
         },
       }
     : {
+        text: "#000000",
         grey: {
           100: "#141414",
           200: "#292929",
@@ -140,9 +142,9 @@ export const themeSettings = (mode) => {
       ...(mode === "dark"
         ? {
             // palette values for dark mode
-            // primary: {
-            //   main: colors.primary[500],
-            // },
+            primary: {
+              main: colors.primary[500],
+            },
             secondary: {
               main: colors.greenAccent[500],
             },
@@ -213,7 +215,7 @@ export const ColorModeContext = createContext({
 });
 
 export const useMode = () => {
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("light");
 
   const colorMode = useMemo(
     () => ({

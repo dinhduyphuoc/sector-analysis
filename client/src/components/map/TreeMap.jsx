@@ -2,13 +2,17 @@ import React, { useEffect, useState } from "react";
 import HighchartsReact from "highcharts-react-official";
 import addTreemapModule from "highcharts/modules/treemap";
 import Highcharts from "highcharts";
+import { useTheme } from "@mui/material";
+import { tokens } from "../../theme";
 
 addTreemapModule(Highcharts);
 
 const TreeMap = ({ chartData, sector, fScoreData, sx }) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const [chartOptions, setChartOptions] = useState({
     chart: {
-      backgroundColor: "#20232E",
+      backgroundColor: colors.primary[400],
       width: sx.width,
       height: sx.height,
     },
@@ -27,7 +31,7 @@ const TreeMap = ({ chartData, sector, fScoreData, sx }) => {
             layoutAlgorithm: "squarified",
 
             alternateStartingDirection: true,
-            borderColor: "#20232E",
+            borderColor: colors.primary[300],
             borderRadius: 6,
             borderWidth: 2,
             levels: [
@@ -37,7 +41,7 @@ const TreeMap = ({ chartData, sector, fScoreData, sx }) => {
                 dataLabels: {
                   enabled: true,
                   align: "left",
-                  backgroundColor: "#20232E",
+                  backgroundColor: "#2a2a2b",
                   borderRadius: 5,
                   verticalAlign: "top",
                   style: {

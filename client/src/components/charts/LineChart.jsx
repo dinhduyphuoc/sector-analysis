@@ -14,11 +14,15 @@ import {
 } from "../../services/services";
 import { roundNum } from "../../utils/utils";
 import { useLoadingUpdate } from "../../contexts/loadingContext";
+import { useTheme } from "@emotion/react";
+import { tokens } from "../../theme";
 
 stock(Highcharts);
 
 const LineChart = ({ sector, isSector }) => {
   const { setProgress } = useLoadingUpdate();
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const [ratio, setRatio] = useState(10);
   const [loading, setLoading] = useState(true);
   const [multiSelectLabel] = useState("Chọn cổ phiếu");
@@ -28,14 +32,14 @@ const LineChart = ({ sector, isSector }) => {
   const [optionsSelected, setOptionsSelected] = useState();
   const [chartOptions, setChartOptions] = useState({
     chart: {
-      backgroundColor: "#20232E",
+      backgroundColor: colors.primary[400],
     },
     title: {
       text: "",
     },
     legend: {
       itemStyle: {
-        color: "white",
+        color: colors.text,
       },
     },
     colors: [
@@ -55,7 +59,7 @@ const LineChart = ({ sector, isSector }) => {
       labels: {
         format: "{value:%d/%m/%y}",
         style: {
-          color: "white",
+          color: colors.text,
         },
       },
     },
@@ -104,11 +108,37 @@ const LineChart = ({ sector, isSector }) => {
           xDateFormat: "%d/%m/%Y",
           split: true,
         },
+        yAxis: {
+          // set yAxis to percentage
+          labels: {
+            formatter: function() {
+              return formatNumber(this.value);
+            },
+          },
+        },
       });
       setLoading(false);
       setProgress(100);
     }
-  }, [sectorData]);
+  }, [sectorData, theme.palette.mode]);
+
+  useEffect(() => {
+    setChartOptions({
+      ...chartOptions,
+      xAxis: {
+        ...chartOptions.xAxis,
+        labels: {
+          ...chartOptions.xAxis.labels,
+          style: {
+            color: colors.text,
+          },
+        },
+      },
+      chart: {
+        backgroundColor: colors.primary[400],
+      },
+    });
+  }, [theme.palette.mode]);
 
   useEffect(() => {
     if (sectorData && tickerData) {
@@ -120,6 +150,30 @@ const LineChart = ({ sector, isSector }) => {
       setLoading(false);
     }
   }, [tickerData, sectorData]);
+
+  const formatNumber = (num) => {
+    switch (ratio) {
+      case 10:
+      case 20:
+      case 40:
+        return num;
+      case 30:
+        if (num < 1000) {
+          return num.toLocaleString();
+        } else if (num >= 1000 && num < 1000000) {
+          return (num / 1000).toFixed(1) + "k";
+        } else if (num >= 1000000 && num < 1000000000) {
+          return (num / 1000000).toFixed(1) + "m";
+        } else {
+          return (num / 1000000000).toFixed(1) + "b";
+        }
+      case 50:
+      case 60:
+        return num * 100 + "%";
+      default:
+        break;
+    }
+  };
 
   const formatQuarterlyData = (data) => {
     const formattedData = data.map((point) => {
@@ -245,7 +299,7 @@ const LineChart = ({ sector, isSector }) => {
       {loading ? (
         <Box
           sx={{
-            bgcolor: "#20232E",
+            bgcolor: colors.primary[400],
             margin: "20px 0",
             height: "400px",
           }}
@@ -269,7 +323,7 @@ const LineChart = ({ sector, isSector }) => {
             justifyContent="space-between"
             sx={{ padding: "24px" }}
           >
-            <Typography variant="h4" sx={{ color: "white", fontWeight: 700 }}>
+            <Typography variant="h4" sx={{ fontWeight: 700 }}>
               {sector instanceof Array ? "Toàn thị trường" : sector.name} |
               VNINDEX
             </Typography>

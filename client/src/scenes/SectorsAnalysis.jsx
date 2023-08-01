@@ -2,15 +2,18 @@ import React, { useEffect, useState } from "react";
 import { getFScore } from "../services/services";
 import { sectorsList } from "../common/common";
 import BarChart from "../components/charts/BarChart";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import Header from "../components/Header";
 import GridLoader from "react-spinners/GridLoader";
 import TreeMap from "../components/map/TreeMap";
 import InfoTooltip from "../components/common/InfoTooltip";
 import "../styles/SectorsAnalysis.css";
 import ItemTabs from "../components/loaders/ItemTabs";
+import { tokens } from "../theme";
 
 const SectorsAnalysis = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const [sectors] = useState(sectorsList);
   const [fScores, setFScore] = useState([]);
   const [fScoreBarChart, setFScoreBarChart] = useState([{}]);
@@ -178,7 +181,7 @@ const SectorsAnalysis = () => {
         title="Phân Tích Các Nhóm Ngành Chứng Khoán Việt Nam"
         subtitle="Công cụ tham chiếu: Piotroski F-score. Dữ liệu lần cuối cập nhật: 03/2023"
         sx={{
-          backgroundColor: "#20232E",
+          backgroundColor: colors.primary[400],
           padding: "10px 20px",
           textAlign: "center",
         }}
@@ -196,7 +199,7 @@ const SectorsAnalysis = () => {
         viên ở Đại học Stanford). <br />
         Bằng cách xác định 9 hệ số trong báo cáo tài chính theo danh sách được
         chỉ định trong bảng F-Score
-        <InfoTooltip title={renderTable()} /> theo thang điểm từ 0-9, chúng ta
+        <InfoTooltip title={renderTable()} /> theo thang điểm từ 0-1, chúng ta
         có thể dễ dàng tham khảo và đánh giá sức khoẻ tài chính về tỷ suất lợi
         nhuận, hiệu quả hoạt động cơ cấu vốn và tính thanh khoản của từng doanh
         nghiệp. <br /> <br />

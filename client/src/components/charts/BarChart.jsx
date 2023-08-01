@@ -2,22 +2,21 @@ import React, { useEffect, useState } from "react";
 import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
 import "../../styles/SectorsAnalysis.css";
+import { useTheme } from "@emotion/react";
+import { tokens } from "../../theme";
 
 const BarChart = ({ chartData, sector, fScoreData, sx }) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const [chartOptions, setChartOptions] = useState({
     chart: {
-      backgroundColor: "#20232E",
+      backgroundColor: colors.primary[400],
       type: "column",
       width: sx.width,
       height: sx.height,
     },
     title: {
       text: "",
-    },
-    legend: {
-      itemStyle: {
-        color: "white",
-      },
     },
     colors: [
       "#058DC7",
@@ -43,7 +42,7 @@ const BarChart = ({ chartData, sector, fScoreData, sx }) => {
         ...chartOptions,
         series: [
           {
-            borderColor: "#20232E",
+            borderColor: colors.primary[400],
             name: sector.name,
             data: chartData,
           },
@@ -56,9 +55,18 @@ const BarChart = ({ chartData, sector, fScoreData, sx }) => {
             text: "F-Score",
           },
         },
+        chart: {
+          ...chartOptions.chart,
+          backgroundColor: colors.primary[400],
+        },
+        legend: {
+          itemStyle: {
+            color: colors.text,
+          },
+        },
         tooltip: {
           useHTML: true,
-          backgroundColor: "#20232E",
+          backgroundColor: colors.primary[300],
           borderColor: "black",
           formatter: function() {
             // Create the HTML table
@@ -112,7 +120,7 @@ const BarChart = ({ chartData, sector, fScoreData, sx }) => {
         },
       });
     }
-  }, [chartData, sector, fScoreData]);
+  }, [chartData, sector, fScoreData, theme.palette.mode]);
 
   return (
     <React.Fragment>

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext, useEffect, useCallback } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Box, Typography } from "@mui/material";
-// import { ColorModeContext, tokens } from "../../theme";
-import SearchBar from "../../components/search/SearchBar";
-import { getStocksList } from "../../services/services";
+import { Box, Typography, IconButton, useTheme } from "@mui/material";
+import { ColorModeContext, tokens } from "../../theme";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 
 const items = [
   {
@@ -14,11 +14,18 @@ const items = [
     name: "Phân tích ngành",
     path: "/analysis",
   },
+  {
+    name: "Dự đoán xu hướng",
+    path: "/prediction",
+  },
 ];
 
 const Topbar = () => {
   const location = useLocation();
-  const navigate = useNavigate();
+  const theme = useTheme();
+  const colors = tokens(theme);
+  const colorMode = useContext(ColorModeContext);
+  const [textColor, setTextColor] = useState(colors.text);
 
   return (
     <Box
@@ -36,23 +43,27 @@ const Topbar = () => {
           to={item.path}
           style={{
             textDecoration: "none",
-            color: location.pathname.includes(item.path) ? "red" : "white",
-            margin: "0 12px",
           }}
         >
-          {item.name}
+          <Typography
+            style={{
+              color: location.pathname.includes(item.path) ? "red" : null,
+              margin: "0 12px",
+            }}
+          >
+            {item.name}
+          </Typography>
         </Link>
       ))}
-      {/* ICONS
       <Box display="flex" marginLeft="auto">
-        <SearchBar
-          options={tickers}
-          onChange={handleOnChange}
-          onKeyDown={handleOnKeyDown}
-          onInput={handleInput}
-          label="Nhập mã cổ phiếu"
-        />
-      </Box> */}
+        <IconButton onClick={colorMode.toggleColorMode}>
+          {theme.palette.mode === "dark" ? (
+            <DarkModeOutlinedIcon />
+          ) : (
+            <LightModeOutlinedIcon sx={{ fill: "#000" }} />
+          )}
+        </IconButton>
+      </Box>
     </Box>
   );
 };

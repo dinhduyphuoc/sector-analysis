@@ -1,15 +1,11 @@
 export const sectorsList = [
   {
-    id: 60,
-    name: "Bất động sản",
-  },
-  {
     id: 30,
     name: "Hàng hóa thiết yếu",
   },
   {
-    id: 20,
-    name: "Công nghiệp",
+    id: 25,
+    name: "Hàng hóa không thiết yếu",
   },
   {
     id: 10,
@@ -20,8 +16,8 @@ export const sectorsList = [
     name: "Nguyên vật liệu",
   },
   {
-    id: 25,
-    name: "Hàng hóa không thiết yếu",
+    id: 60,
+    name: "Bất động sản",
   },
   {
     id: 55,
@@ -30,6 +26,10 @@ export const sectorsList = [
   {
     id: 45,
     name: "Công nghệ",
+  },
+  {
+    id: 20,
+    name: "Công nghiệp",
   },
   {
     id: 35,
