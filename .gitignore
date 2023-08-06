@@ -141,3 +141,7 @@ pgdata/
 # local python env
 __pycache__/
 venv/
+
+# build projects
+build
+dist

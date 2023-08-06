@@ -1,8 +1,9 @@
 import { sectorsList } from "../common/common";
 import http from "../utils/httpUtils";
 
-const host = "http://localhost:8000/v1";
-const host2 = "http://127.0.0.1:5001/api";
+const host = process.env.REACT_APP_HOST;
+
+console.log("host", host);
 
 export const getStocksList = async (sectorid) => {
   let url = `${host}/stock/list`;
@@ -61,7 +62,8 @@ export const getFScore = async (sectorid, year = 2022) => {
 };
 
 export const getStockPrediction = async (tickersymbol, predict_range) => {
-  const url = `${host2}/chart?tickersymbol=${tickersymbol}&predict_range=${predict_range}`;
+  const url = `${host}/prediction/chart?tickersymbol=${tickersymbol}&predict_range=${predict_range}`;
+  console.log("url", url)
   const { data } = await http.get(url);
   return data;
 }

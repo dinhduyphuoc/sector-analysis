@@ -11,7 +11,11 @@ RUN npm install --silent
 # add app
 COPY . ./
 
+RUN npm run build
+
+RUN npm install -g serve
+
 EXPOSE 3000
 
 # start app
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build"]
